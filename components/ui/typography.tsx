@@ -6,7 +6,7 @@ const typographyVariants = cva("font-poppins", {
   variants: {
     variant: {
       h1: "scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl lg:leading-[1.2]",
-      h2: "scroll-m-20 text-3xl font-semibold tracking-tight",
+      h2: "scroll-m-20 text-4xl lg:text-5xl font-semibold tracking-tight",
       h3: "scroll-m-20 text-2xl font-semibold tracking-tight",
       h4: "scroll-m-20 text-xl font-semibold tracking-tight",
       h5: "scroll-m-20 text-lg font-semibold tracking-tight",
