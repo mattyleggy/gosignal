@@ -1,6 +1,6 @@
 import Section from "@/components/sections/section";
 import { GlowCircle } from "@/components/ui/glow-circle";
-import { Typography } from "@/components/ui/typography";
+import { Typography } from "@/components/common/typography";
 
 export default function Reasons() {
     return (

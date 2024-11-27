@@ -1,7 +1,7 @@
 import UspBar from "@/components/sections/usp-bar";
-import { Typography } from "@/components/ui/typography";
+import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
-import FeatureCard from "@/components/feature-card";
+import FeatureCard from "@/components/common/feature-card";
 import Section from "@/components/sections/section";
 import { FaStar } from "react-icons/fa6";
 import { Arrow } from "@/components/ui/arrow";

@@ -2,7 +2,7 @@ import Header from "@/components/header/header";
 import ImageShuffle from "@/components/header/image-shuffle";
 import { Arrow } from "@/components/ui/arrow";
 import { Button } from "@/components/ui/button";
-import USPCard from "@/components/usp-card";
+import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";
 import { FaRegThumbsUp } from "react-icons/fa";
 

@@ -1,0 +1,19 @@
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { GlowCircle } from "../ui/glow-circle";
+
+export default function ImageShadow({ src, alt }: { src: string; alt: string }) {
+    return (
+        <div className="relative w-fit h-fit">            
+            <div className="absolute h-full w-full bg-primary top-5 left-5 rounded-[300px] rounded-b-3xl" />
+            <Image
+                src={src}
+                alt={alt}
+                width={500}
+                height={100}
+                className="relative rounded-[300px] rounded-b-3xl z-10"
+            />
+            <GlowCircle size="lg" className="absolute -bottom-1/3 -right-1/3 z-10" />
+        </div>
+    );
+}

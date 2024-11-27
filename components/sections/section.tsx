@@ -2,9 +2,10 @@ type SectionProps = {
     children: React.ReactNode;
     variant?: "default" | "light";
     className?: string;
+    backgroundPosition?: string;
 };
 
-export default function Section({ children, variant = "default", className }: SectionProps) {
+export default function Section({ children, variant = "default", className, backgroundPosition }: SectionProps) {
     return (
         <section
             className={`
@@ -14,7 +15,7 @@ export default function Section({ children, variant = "default", className }: Se
             {...(variant === "default" ? {
                 style: {
                     backgroundImage: "url('images/repeating-squares.png')",
-                    backgroundPosition: "bottom",
+                    backgroundPosition: backgroundPosition || "center",
                     backgroundRepeat: "no-repeat",
                 }
             } : {})}

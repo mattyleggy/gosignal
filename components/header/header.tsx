@@ -1,6 +1,6 @@
 import { Badge } from "../ui/badge";
 import { GlowCircle } from "../ui/glow-circle";
-import { Typography } from "../ui/typography";
+import { Typography } from "../common/typography";
 
 export default function Header({
     badge,
