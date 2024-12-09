@@ -5,6 +5,12 @@ import { ReasonsToChooseUs } from "./_components/reasons-to-choose-us";
 import { CaseStudies } from "./_components/case-studies";
 import { PricingSection } from "./_components/pricing-section";
 import { PricingPlans } from "./_components/pricing-plans";
+import StandOut from "./_components/stand-out";
+import WhoAreWe from "./_components/who-are-we";
+import FAQ from "./_components/faq";
+import { ContactForm } from "./_components/contact-form";
+import { CallToAction } from "@/components/sections/call-to-action";
+import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
     return (
@@ -16,6 +22,12 @@ export default function Home() {
             <PricingSection />
             <CaseStudies />
             <PricingPlans />
+            <StandOut />
+            <WhoAreWe />
+            <FAQ />
+            <ContactForm />
+            <CallToAction overlapsFooter={true} />
+            <Footer hasCta={true} />
         </>
     );
 }

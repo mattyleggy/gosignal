@@ -68,7 +68,7 @@ export function ReasonsToChooseUs() {
 
                     <div className="space-y-6">
                         {reasons.map((reason, index) => (
-                            <div className="flex gap-4">
+                            <div key={index} className="flex gap-4">
                                 <IconCircle icon={reason.icon} size="lg" />
                                 <div>
                                     <h3 className="font-semibold">{reason.title}</h3>

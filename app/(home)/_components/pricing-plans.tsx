@@ -60,8 +60,8 @@ export function PricingPlans() {
                 </Typography>
             </div>
 
-            <GlowCircle size="lg"  className="absolute ml-72 mt-20 -z-10" />
-            <GlowCircle size="lg"  className="absolute -bottom-20 -right-20 -z-10" />
+            <GlowCircle size="lg" className="absolute ml-72 mt-20 -z-10" />
+            <GlowCircle size="lg" className="absolute -bottom-20 -right-20 -z-10" />
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {plans.map((plan) => (
