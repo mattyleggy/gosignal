@@ -1,6 +1,6 @@
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
-import { Arrow } from "@/components/ui/arrow";
+import { Arrow } from "@/components/common/arrow";
 import Image from "next/image";
 import Section from "@/components/sections/section";
 import { cn } from "@/lib/utils";

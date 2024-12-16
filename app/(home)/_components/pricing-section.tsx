@@ -48,7 +48,7 @@ export function PricingSection() {
                 {/* Left side - Content */}
                 <div className="w-3/4">
                     <div className="flex flex-col items-start gap-4">
-                        <Badge variant="secondary" className="bg-[#E8F5E9] text-[#4CAF50]">
+                        <Badge variant="secondary">
                             Lorem Ipsum Dummy
                         </Badge>
 

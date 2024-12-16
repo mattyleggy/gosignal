@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import FeatureCard from "@/components/common/feature-card";
 import Section from "@/components/sections/section";
 import { FaStar } from "react-icons/fa6";
-import { Arrow } from "@/components/ui/arrow";
+import { Arrow } from "@/components/common/arrow";
 
 export default function KeyFeatures() {
     const FaStarIcon = <FaStar className="text-xl" />;

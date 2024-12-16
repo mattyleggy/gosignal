@@ -1,6 +1,6 @@
 import Header from "@/components/header/header";
 import ImageShuffle from "@/components/header/image-shuffle";
-import { Arrow } from "@/components/ui/arrow";
+import { Arrow } from "@/components/common/arrow";
 import { Button } from "@/components/ui/button";
 import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";

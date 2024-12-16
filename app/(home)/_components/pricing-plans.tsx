@@ -52,7 +52,7 @@ export function PricingPlans() {
     return (
         <Section variant="light" className="relative z-10">
             <div className="text-center space-y-4 mb-12">
-                <Badge variant="secondary" className="bg-[#E8F5E9] text-[#4CAF50]">
+                <Badge variant="secondary">
                     A Package Fit For Everyone
                 </Badge>
                 <Typography variant="h2" className="max-w-3xl mx-auto">
