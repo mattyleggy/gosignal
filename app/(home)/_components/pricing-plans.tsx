@@ -52,9 +52,7 @@ export function PricingPlans() {
     return (
         <Section variant="light" className="relative z-10">
             <div className="text-center space-y-4 mb-12">
-                <Badge variant="secondary">
-                    A Package Fit For Everyone
-                </Badge>
+                <Badge variant="secondary">A Package Fit For Everyone</Badge>
                 <Typography variant="h2" className="max-w-3xl mx-auto">
                     We Have Exactly What You Need To Help Your Business Grow
                 </Typography>
@@ -65,62 +63,57 @@ export function PricingPlans() {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {plans.map((plan) => (
-                    <>
+                    <div key={plan.name} className={cn("rounded-2xl relative z-10", "bg-white ")}>
                         <div
-                            key={plan.name}
-                            className={cn("rounded-2xl relative z-10", "bg-white ")}
+                            className={cn(
+                                "p-8 z-10 space-y-6 relative bg-white rounded-2xl shadow border-2",
+                                plan.popular ? "border-primary" : "border-black/10"
+                            )}
                         >
-                            <div
-                                className={cn(
-                                    "p-8 z-10 space-y-6 relative bg-white rounded-2xl shadow border-2",
-                                    plan.popular ? "border-primary" : "border-black/10"
-                                )}
-                            >
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-2xl">{plan.icon}</span>
-                                        <h3 className="text-xl font-semibold">{plan.name}</h3>
-                                        {plan.popular && (
-                                            <Badge className="ml-auto bg-primary text-white">
-                                                Most Popular
-                                            </Badge>
-                                        )}
-                                    </div>
-
-                                    <div className="flex items-baseline gap-2">
-                                        <span className="text-4xl font-bold">{plan.price}</span>
-                                        <span className="text-2xl line-through text-gray-400">
-                                            {plan.originalPrice}
-                                        </span>
-                                    </div>
-                                    <p className="text-sm opacity-80">{plan.description}</p>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-3">
+                                    <span className="text-2xl">{plan.icon}</span>
+                                    <h3 className="text-xl font-semibold">{plan.name}</h3>
+                                    {plan.popular && (
+                                        <Badge className="ml-auto bg-primary text-white">
+                                            Most Popular
+                                        </Badge>
+                                    )}
                                 </div>
 
-                                <Button className={cn("w-full")}>Get Started Now</Button>
-
-                                <ul className="space-y-4">
-                                    {plan.features.map((feature) => (
-                                        <li key={feature} className="flex gap-3 items-start">
-                                            <Check className="w-5 h-5 shrink-0 mt-0.5" />
-                                            <span className="text-sm">{feature}</span>
-                                        </li>
-                                    ))}
-                                    {plan.optionalFeatures?.map((feature) => (
-                                        <li
-                                            key={feature.text}
-                                            className="flex gap-3 items-start opacity-60"
-                                        >
-                                            <X className="w-5 h-5 shrink-0 mt-0.5" />
-                                            <span className="text-sm">{feature.text}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <div className="flex items-baseline gap-2">
+                                    <span className="text-4xl font-bold">{plan.price}</span>
+                                    <span className="text-2xl line-through text-gray-400">
+                                        {plan.originalPrice}
+                                    </span>
+                                </div>
+                                <p className="text-sm opacity-80">{plan.description}</p>
                             </div>
-                            {plan.popular && (
-                                <div className="absolute w-full h-full bg-primary rounded-2xl top-5 left-5 -z-10"></div>
-                            )}
+
+                            <Button className={cn("w-full")}>Get Started Now</Button>
+
+                            <ul className="space-y-4">
+                                {plan.features.map((feature) => (
+                                    <li key={feature} className="flex gap-3 items-start">
+                                        <Check className="w-5 h-5 shrink-0 mt-0.5" />
+                                        <span className="text-sm">{feature}</span>
+                                    </li>
+                                ))}
+                                {plan.optionalFeatures?.map((feature) => (
+                                    <li
+                                        key={feature.text}
+                                        className="flex gap-3 items-start opacity-60"
+                                    >
+                                        <X className="w-5 h-5 shrink-0 mt-0.5" />
+                                        <span className="text-sm">{feature.text}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    </>
+                        {plan.popular && (
+                            <div className="absolute w-full h-full bg-primary rounded-2xl top-5 left-5 -z-10"></div>
+                        )}
+                    </div>
                 ))}
             </div>
         </Section>
