@@ -2,7 +2,6 @@ import HomeHeader from "./_components/home-header";
 import BackgroundGradient from "@/components/header/background-gradient";
 import KeyFeatures from "./_components/key-features";
 import { ReasonsToChooseUs } from "./_components/reasons-to-choose-us";
-import { CaseStudies } from "./_components/case-studies";
 import { PricingSection } from "./_components/pricing-section";
 import { PricingPlans } from "./_components/pricing-plans";
 import StandOut from "./_components/stand-out";
@@ -16,16 +15,24 @@ export default function Home() {
     return (
         <>
             <BackgroundGradient />
+
             <HomeHeader />
-            <KeyFeatures />
-            <ReasonsToChooseUs />
-            <PricingSection />
-            <CaseStudies />
-            <PricingPlans />
-            <StandOut />
-            <WhoAreWe />
-            <FAQ />
-            <ContactForm />
+            <div id="services" className="w-full">
+                <KeyFeatures />
+                <ReasonsToChooseUs />
+            </div>
+            <div id="pricing" className="w-full">
+                <PricingSection />
+                <PricingPlans />
+            </div>
+            <div id="about" className="w-full">
+                <StandOut />
+                <WhoAreWe />
+            </div>
+            <div id="contact" className="w-full">
+                <FAQ />
+                <ContactForm />
+            </div>
             <CallToAction overlapsFooter={true} />
             <Footer hasCta={true} />
         </>

@@ -58,20 +58,20 @@ export default function WhoAreWe() {
                 <div className="space-y-6 w-1/2">
                     <div className="space-y-6 text-lg text-muted-foreground">
                         <p>
-                            I'm Matthew, a Brissie local. I started OpenLid Websites with a goal to
+                            I&apos;m Matthew, a Brissie local. I started OpenLid Websites with a goal to
                             make websites affordable and help businesses & contractors grow their
                             business and gain leads.
                         </p>
 
                         <p>
                             I have over 15 years experience creating websites for businesses and
-                            noticed a lot of tradies don't have the time to worry about their
+                            noticed a lot of tradies don&apos;t have the time to worry about their
                             websites or leads.
                         </p>
 
                         <p>
-                            Just as you're trusted in your trade, you can trust me to provide the
-                            exact result you need. I'm here to listen to how you want to portray
+                            Just as you&apos;re trusted in your trade, you can trust me to provide the
+                            exact result you need. I&apos;m here to listen to how you want to portray
                             your business and here to help whenever you need it.
                         </p>
                     </div>

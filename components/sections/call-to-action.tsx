@@ -24,7 +24,7 @@ export function CallToAction({ overlapsFooter = false }: CallToActionProps) {
 
                 <p className="text-white/80 max-w-2xl mx-auto">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
                 </p>
 
                 <div className="flex gap-4 max-w-xl mx-auto">

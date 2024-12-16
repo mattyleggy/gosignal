@@ -51,7 +51,7 @@ export const ContactForm = () => {
             <div className="w-full max-w-6xl mx-auto px-4 space-y-6">
                 <div className="text-center mb-8 space-y-6">
                     <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
-                    <Typography variant="h2" className="max-w-3xl mx-auto">Let's Get In Touch</Typography>
+                    <Typography variant="h2" className="max-w-3xl mx-auto">Let&apos;s Get In Touch</Typography>
                     <p className="text-gray-600 max-w-3xl mx-auto">
                         Our company provides all types of roof repairs, both residential and
                         commercial, regardless of the damage level. We also offer partial tile

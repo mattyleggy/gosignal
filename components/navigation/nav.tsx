@@ -2,31 +2,38 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useState } from "react";
-import Image from "next/image";
+import { Logo } from "../common/logo";
+import { useScrollToSection } from "../../hooks/useScrollToSection";
 
 export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { handleNavigation } = useScrollToSection();
 
     const navigationLinks = [
         {
             label: "Home",
             href: "/",
+            sectionId: "home"
         },
         {
             label: "Services",
             href: "/services",
+            sectionId: "services"
         },
         {
             label: "Pricing",
             href: "/pricing",
+            sectionId: "pricing"
         },
         {
             label: "About Us",
             href: "/about",
+            sectionId: "about"
         },
         {
             label: "Contact",
             href: "/contact",
+            sectionId: "contact"
         },
     ];
 
@@ -34,7 +41,9 @@ export default function Nav() {
         <nav className="flex justify-between items-center max-w-7xl w-full py-10 px-4">
             <div>
                 <div>
-                    <Image src="/images/logo.png" alt="OpenLid" width={100} height={30} />
+                    <Link href="/">
+                        <Logo />
+                    </Link>
                 </div>
             </div>
             <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -60,7 +69,12 @@ export default function Nav() {
                 <ul className="flex gap-10 items-center w-full">
                     {navigationLinks.map((link) => (
                         <li key={link.href}>
-                            <Link href={link.href}>{link.label}</Link>
+                            <Link
+                                href={link.href}
+                                onClick={(e) => handleNavigation(e, link.href, link.sectionId)}
+                            >
+                                {link.label}
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -76,7 +90,12 @@ export default function Nav() {
                     <ul className="flex flex-col gap-4">
                         {navigationLinks.map((link) => (
                             <li key={link.href}>
-                                <Link href={link.href}>{link.label}</Link>
+                                <Link
+                                    href={link.href}
+                                    onClick={(e) => handleNavigation(e, link.href, link.sectionId)}
+                                >
+                                    {link.label}
+                                </Link>
                             </li>
                         ))}
                     </ul>

@@ -3,7 +3,6 @@ import USPCard from "@/components/common/usp-card";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
 import { GlowCircle } from "@/components/ui/glow-circle";
-import Image from "next/image";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { IconCircle } from "@/components/common/icon-circle";
 import ImageShadow from "@/components/common/image-shadow";

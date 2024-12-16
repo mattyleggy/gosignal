@@ -1,6 +1,5 @@
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
-import { Arrow } from "@/components/common/arrow";
 import Image from "next/image";
 import Section from "@/components/sections/section";
 import { cn } from "@/lib/utils";
@@ -65,7 +64,7 @@ export default function StandOut() {
                                     <span className="font-bold leading-relaxed">
                                         hand-crafted web design & development
                                     </span>{" "}
-                                    as we don't use third-party templates, meaning every website is
+                                    as we don&apos;t use third-party templates, meaning every website is
                                     unique.
                                 </div>
                             </div>

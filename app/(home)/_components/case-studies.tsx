@@ -17,7 +17,7 @@ export function CaseStudies() {
                 </div>
 
                 <Typography variant="h2" className="max-w-4xl">
-                    Don't Just Take Our Word For It, Take A Look For Yourself
+                    Don&apos;t Just Take Our Word For It, Take A Look For Yourself
                 </Typography>
             </div>
 
@@ -41,7 +41,7 @@ export function CaseStudies() {
                     </div>
 
                     <p className="text-muted-foreground">
-                        We built a clean, user-friendly website for Brisbane's top roofing company,
+                        We built a clean, user-friendly website for Brisbane&apos;s top roofing company,
                         designed to showcase their services, attract more leads, and make it easy
                         for customers to get in touch.
                     </p>

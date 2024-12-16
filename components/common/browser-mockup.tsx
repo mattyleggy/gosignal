@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 
 interface BrowserMockupProps {
     url: string;

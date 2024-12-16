@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa6";
 import Section from "./section";
 import { Typography } from "@/components/common/typography";
+import { Logo } from "../common/logo";
 
 const socialLinks = [
     { icon: <FaFacebook className="w-5 h-5" />, href: "#" },
@@ -40,9 +40,9 @@ export function Footer({ hasCta = false }: FooterProps) {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Logo and Description */}
                     <div className="space-y-4">                        
-                        <Image src="/images/logo.png" alt="OpenLid" width={120} height={40} />
+                        <Logo size={200} />
                         <p className="text-muted-foreground">
-                            Open the lid to your business and let the customers in.
+                            Give your business the green light it needs
                         </p>
                         <div className="flex gap-4">
                             {socialLinks.map((social, index) => (
