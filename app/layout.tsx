@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/navigation/nav";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = localFont({
     src: [
@@ -33,6 +34,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${poppins.variable} antialiased`}>
+                <Toaster />
                 <div id="home" className="w-full">
                     <main className="flex flex-col items-center">
                         <Nav />

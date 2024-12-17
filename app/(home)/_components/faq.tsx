@@ -13,6 +13,7 @@ import { FaQuestion } from "react-icons/fa6";
 import Image from "next/image";
 import { Arrow } from "@/components/common/arrow";
 import { GlowCircle } from "@/components/ui/glow-circle";
+import { QuestionCloud } from "@/components/common/question-cloud";
 
 const faqs = [
     {
@@ -61,13 +62,7 @@ export default function FAQ() {
                         <Typography variant="h2">Frequently Asked Questions (FAQ)</Typography>
 
                         <div className="relative inline-block">
-                            <Image
-                                src="/images/question-cloud.png"
-                                alt="Question Mark"
-                                width={192}
-                                height={192}
-                                className="mt-10"
-                            />
+                            <QuestionCloud />
                             <Arrow className="absolute -right-24 -bottom-24" rotation={90} />
                         </div>
                     </div>

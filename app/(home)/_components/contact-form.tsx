@@ -18,7 +18,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/common/typography";
 import { FaPaperPlane } from "react-icons/fa6";
-
+import { submitContactForm } from "@/app/actions/contact";
+import { useToast } from "@/hooks/use-toast";
+import { useState, useEffect, useRef } from "react";
 
 // Form validation schema
 const formSchema = z.object({
@@ -30,6 +32,17 @@ const formSchema = z.object({
 });
 
 export const ContactForm = () => {
+    const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const successMessageRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (isSubmitted && successMessageRef.current) {
+            successMessageRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [isSubmitted]);
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -42,8 +55,30 @@ export const ContactForm = () => {
     });
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
-        // Handle form submission logic here
-        console.log(values);
+        try {
+            setIsSubmitting(true);
+
+            const result = await submitContactForm(values);
+
+            if (result.success) {
+                setIsSubmitted(true);
+                form.reset();
+            } else {
+                toast({
+                    title: "Error",
+                    description: "Failed to send message. Please try again later.",
+                    variant: "destructive",
+                });
+            }
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "Something went wrong. Please try again later.",
+                variant: "destructive",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -51,7 +86,9 @@ export const ContactForm = () => {
             <div className="w-full max-w-6xl mx-auto px-4 space-y-6">
                 <div className="text-center mb-8 space-y-6">
                     <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
-                    <Typography variant="h2" className="max-w-3xl mx-auto">Let&apos;s Get In Touch</Typography>
+                    <Typography variant="h2" className="max-w-3xl mx-auto">
+                        Let&apos;s Get In Touch
+                    </Typography>
                     <p className="text-gray-600 max-w-3xl mx-auto">
                         Our company provides all types of roof repairs, both residential and
                         commercial, regardless of the damage level. We also offer partial tile
@@ -64,34 +101,87 @@ export const ContactForm = () => {
                         onSubmit={form.handleSubmit(onSubmit)}
                         className="max-w-7xl mx-auto space-y-6"
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <FormField
-                                control={form.control}
-                                name="fullName"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>
-                                            Full Name <span className="text-red-500">*</span>
-                                        </FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Your full name" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                        <fieldset disabled={isSubmitted} className={isSubmitted ? "opacity-50" : ""}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <FormField
+                                    control={form.control}
+                                    name="fullName"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Full Name <span className="text-red-500">*</span>
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="Your full name" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+
+                                <FormField
+                                    control={form.control}
+                                    name="email"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Email <span className="text-red-500">*</span>
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    placeholder="E.G. John.Smith@Somecompany.Com.Au"
+                                                    {...field}
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+
+                                <FormField
+                                    control={form.control}
+                                    name="businessName"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Business Name <span className="text-red-500">*</span>
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="E.G. My Business" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+
+                                <FormField
+                                    control={form.control}
+                                    name="contactNumber"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Contact Number <span className="text-red-500">*</span>
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="E.G. 04XX XXX XXX" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
 
                             <FormField
                                 control={form.control}
-                                name="email"
+                                name="message"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>
-                                            Email <span className="text-red-500">*</span>
-                                        </FormLabel>
+                                        <FormLabel>Message</FormLabel>
                                         <FormControl>
-                                            <Input
-                                                placeholder="E.G. John.Smith@Somecompany.Com.Au"
+                                            <Textarea
+                                                placeholder="Your Message Goes Here..."
+                                                className="resize-none"
+                                                rows={6}
                                                 {...field}
                                             />
                                         </FormControl>
@@ -99,64 +189,36 @@ export const ContactForm = () => {
                                     </FormItem>
                                 )}
                             />
+                        </fieldset>
 
-                            <FormField
-                                control={form.control}
-                                name="businessName"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>
-                                            Business Name <span className="text-red-500">*</span>
-                                        </FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="E.G. My Business" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-
-                            <FormField
-                                control={form.control}
-                                name="contactNumber"
-                                render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>
-                                            Contact Number <span className="text-red-500">*</span>
-                                        </FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="E.G. 04XX XXX XXX" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                        </div>
-
-                        <FormField
-                            control={form.control}
-                            name="message"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Message</FormLabel>
-                                    <FormControl>
-                                        <Textarea
-                                            placeholder="Your Message Goes Here..."
-                                            className="resize-none"
-                                            rows={6}
-                                            {...field}
-                                        />
-                                    </FormControl>
-                                    <FormMessage />
-                                </FormItem>
+                        <div className="text-center space-y-4">
+                            {isSubmitted ? (
+                                <>
+                                    <Typography variant="h3" className="text-green-600">
+                                        Thank You for Contacting Us!
+                                    </Typography>
+                                    <p className="text-gray-600">
+                                        We have received your message and will get back to you shortly.
+                                    </p>
+                                    <Button 
+                                        onClick={() => setIsSubmitted(false)} 
+                                        variant="dropShadow"
+                                    >
+                                        Send Another Message
+                                    </Button>
+                                </>
+                            ) : (
+                                <Button
+                                    type="submit"
+                                    size="lg"
+                                    className="gap-2"
+                                    variant="dropShadow"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? "Sending..." : "Send Message"}
+                                    <FaPaperPlane />
+                                </Button>
                             )}
-                        />
-
-                        <div className="text-center">
-                            <Button type="submit" size="lg" className="gap-2" variant="dropShadow">
-                                Send Message                                
-                                <FaPaperPlane />
-                            </Button >
                         </div>
                     </form>
                 </Form>

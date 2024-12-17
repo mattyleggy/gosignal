@@ -22,9 +22,9 @@ export default function StandOut() {
 
                 <div className="space-y-6">
                     {/* Main Content Grid */}
-                    <div className="flex flex-row space-x-6">
+                    <div className="flex flex-col lg:flex-row gap-6">
                         {/* Left Column - Analytics Card */}
-                        <div className={cn(topLeftClasses, " bg-black/80 space-y-6")}>
+                        <div className={cn(topLeftClasses, "bg-black/80 space-y-6 w-full lg:w-auto")}>
                             <div className="flex items-center py-2 px-4 bg-white/10 rounded-lg space-x-2">
                                 <Image
                                     src="/images/google-icon.png"
@@ -51,7 +51,7 @@ export default function StandOut() {
                         </div>
 
                         {/* Right Column - Features */}
-                        <div className="flex flex-col space-y-6 w-1/2">
+                        <div className="flex flex-col space-y-6 w-full lg:w-1/2">
                             {/* Feature 1 */}
                             <div
                                 className={cn(
@@ -83,17 +83,15 @@ export default function StandOut() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-row space-x-6">
+                    <div className="flex flex-col lg:flex-row gap-6">
                         {/* Feature 3 */}
-                        <div className={cn(topRightClasses, "bg-primary/10 text-black/90 w-1/2")}>
+                        <div className={cn(topRightClasses, "bg-primary/10 text-black/90 w-full lg:w-1/2")}>
                             We setup your Facebook & Instagram socials and help grow your audience
                             with regular content to keep your customers engaged.
                         </div>
 
                         {/* Feature 4 */}
-                        <div
-                            className={cn(topLeftClasses, "bg-primary text-primary-foreground/90")}
-                        >
+                        <div className={cn(topLeftClasses, "bg-primary text-primary-foreground/90 w-full lg:w-1/2")}>
                             <div className="flex items-center gap-4">
                                 <Image
                                     src="/images/australia-flag.png"

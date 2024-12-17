@@ -31,14 +31,14 @@ const reasons = [
 export function ReasonsToChooseUs() {
     return (
         <Section variant="light" className="relative">
-            <div className="grid lg:grid-cols-2 gap-0 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 items-center">
                 {/* Left side - Image */}
-                <div className="relative">
-                    <div className="">
+                <div className="relative order-2 lg:order-1">
+                    <div className="px-4 lg:px-0">
                         <ImageShadow src="/images/house.png" alt="Modern building" />
 
                         {/* Stats overlay */}
-                        <USPCard className="flex flex-row gap-3 justify-center items-center absolute left-2 top-14 z-10">
+                        <USPCard className="flex flex-row gap-3 justify-center items-center absolute left-6 lg:left-2 top-14 z-10">
                             <IconCircle
                                 icon={<FaRegThumbsUp className="text-xl" />}
                                 variant="light"
@@ -54,10 +54,12 @@ export function ReasonsToChooseUs() {
                 </div>
 
                 {/* Right side - Content */}
-                <div className="space-y-8">
+                <div className="space-y-8 order-1 lg:order-2 px-4 lg:px-0">
                     <div className="flex flex-col items-start gap-4">
                         <Badge variant="secondary">Why Choose Us</Badge>
-                        <Typography variant="h2">Reasons To Choose Us For Your Website</Typography>
+                        <Typography variant="h2" className="text-3xl lg:text-5xl">
+                            Reasons To Choose Us For Your Website
+                        </Typography>
                         <p className="text-muted-foreground">
                             We have been installing boilers and heating systems for over 10 years
                             and we are proud to say we are experts in this field. We have a team of
@@ -78,7 +80,7 @@ export function ReasonsToChooseUs() {
                     </div>
                 </div>
             </div>
-            <GlowCircle size="lg" className="z-0 -top-1/4 -right-60" />
+            <GlowCircle size="lg" className="z-0 hidden lg:block -top-1/4 -right-60" />
         </Section>
     );
 }

@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 interface FeatureCardProps {
     icon: React.ReactNode;
     title: string;
@@ -14,19 +16,19 @@ export default function FeatureCard({
     variant = "default" 
 }: FeatureCardProps) {
     return (
-        <div className={`
-            flex flex-col items-center gap-4 p-6 rounded-3xl max-w-80
-            ${variant === "featured" 
+        <div className={cn(
+            "flex flex-col items-center gap-4 p-6 rounded-3xl md:max-w-80",
+            variant === "featured" 
                 ? "bg-primary text-white shadow-lg [&_p]:text-white/80" 
-                : "bg-white shadow-md"
-            }
-            ${className || ''}
-        `}>
-            <div className={`p-3 rounded-full ${
+                : "bg-white shadow-md",
+            className
+        )}>
+            <div className={cn(
+                "p-3 rounded-full",
                 variant === "featured" 
                     ? "bg-white/10 text-white" 
                     : "bg-primary/10"
-            }`}>
+            )}>
                 {icon}
             </div>
             <h3 className="text-xl font-semibold">{title}</h3>

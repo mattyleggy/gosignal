@@ -44,24 +44,18 @@ export function PricingSection() {
 
     return (
         <Section variant="light" className="relative">
-            <div className="flex flex-col lg:flex-row gap-12 items-center">
-                {/* Left side - Content */}
-                <div className="w-3/4">
-                    <div className="flex flex-col items-start gap-4">
-                        <Badge variant="secondary">
-                            Lorem Ipsum Dummy
-                        </Badge>
-
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <div className="w-full lg:w-3/4">
+                    <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
+                        <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
                         <Typography variant="h2" className="leading-tight">
                             $0 Down, $150 Per Month. 12 Months Minimum
                         </Typography>
-
                         <p className="text-muted-foreground text-lg">
                             Our company provides all types of roof repairs, both residential and
                             commercial, regardless of the damage level. We also offer partial tile
                             replacement.
                         </p>
-
                         <Button
                             variant={"dropShadow"}
                             className="bg-primary text-white hover:bg-primary/90 mt-4"
@@ -71,18 +65,17 @@ export function PricingSection() {
                     </div>
                 </div>
 
-                {/* Right side - Cards Grid */}
-                <div className="grid grid-cols-2 gap-4 relative z-10">
-                    <GlowCircle size="lg" className="-top-1/4 -right-1/4" />
-                    <GlowCircle size="lg" className="-bottom-1/4 -left-1/4" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10 w-full">
+                    <GlowCircle size="lg" className="hidden lg:block -top-1/4 -right-1/4" />
+                    <GlowCircle size="lg" className="hidden lg:block -bottom-1/4 -left-1/4" />
                     {usps.map((usp, index) => (
                         <div
                             key={index}
                             className={cn(
                                 "p-6 rounded-xl space-y-4",
+                                "shadow-lg",
                                 index === 2 ? "bg-primary text-white" : "bg-white",
-                                index % 2 === 1 ? "-translate-y-10" : "",
-                                "shadow-lg"
+                                index % 2 === 1 ? "lg:-translate-y-10" : ""
                             )}
                         >
                             <div
@@ -95,9 +88,9 @@ export function PricingSection() {
                             </div>
                             <h3 className="font-semibold text-xl">{usp.title}</h3>
                             <p
-                                className={`
-                                ${index === 2 ? "text-white/80" : "text-muted-foreground"}
-                            `}
+                                className={cn(
+                                    index === 2 ? "text-white/80" : "text-muted-foreground"
+                                )}
                             >
                                 {usp.description}
                             </p>

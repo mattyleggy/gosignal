@@ -13,7 +13,7 @@ interface TeamMemberProps {
 
 function TeamMember({ image, name, role, location }: TeamMemberProps) {
     return (
-        <div className="bg-white rounded-3xl p-8 shadow-lg space-y-4 relative">
+        <div className="bg-white rounded-3xl p-8 shadow-lg space-y-4 relative mb-24 md:mb-0">
             <div className="relative w-48 h-16 mx-auto">
                 <div className="absolute h-48 w-48 -translate-y-2/3 rounded-full p-4 bg-primary/20">
                     <Image
@@ -53,9 +53,9 @@ export default function WhoAreWe() {
             <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
             <Typography variant="h2">Who Are We?</Typography>
 
-            <div className="flex flex-row justify-center items-center space-x-10 w-full">
+            <div className="flex flex-col-reverse md:flex-row justify-center items-center md:space-x-10 space-y-reverse space-y-10 md:space-y-0 w-full">
                 {/* Left Column - Text Content */}
-                <div className="space-y-6 w-1/2">
+                <div className="space-y-6 w-full md:w-1/2">
                     <div className="space-y-6 text-lg text-muted-foreground">
                         <p>
                             I&apos;m Matthew, a Brissie local. I started OpenLid Websites with a goal to
@@ -78,7 +78,7 @@ export default function WhoAreWe() {
                 </div>
 
                 {/* Right Column - Team Members */}
-                <div className="flex flex-row items-center justify-center space-x-10 mt-24">
+                <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-10 pt-28">
                     <TeamMember
                         image="/images/matty-john.jpg"
                         name="Matty John"
