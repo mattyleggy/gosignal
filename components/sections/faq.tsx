@@ -1,6 +1,6 @@
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
-import Section from "@/components/sections/section";
+import Section from "@/components/common/section";
 import {
     Accordion,
     AccordionContent,

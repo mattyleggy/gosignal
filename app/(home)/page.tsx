@@ -1,15 +1,15 @@
-import HomeHeader from "./_components/home-header";
+import HomeHeader from "../../components/sections/home-header";
 import BackgroundGradient from "@/components/header/background-gradient";
-import KeyFeatures from "./_components/key-features";
-import { ReasonsToChooseUs } from "./_components/reasons-to-choose-us";
-import { PricingSection } from "./_components/pricing-section";
-import { PricingPlans } from "./_components/pricing-plans";
-import StandOut from "./_components/stand-out";
-import WhoAreWe from "./_components/who-are-we";
-import FAQ from "./_components/faq";
-import { ContactForm } from "./_components/contact-form";
-import { CallToAction } from "@/components/sections/call-to-action";
-import { Footer } from "@/components/sections/footer";
+import KeyFeatures from "../../components/sections/key-features";
+import { ReasonsToChooseUs } from "../../components/sections/reasons-to-choose-us";
+import { PricingSection } from "../../components/sections/pricing-section";
+import { PricingPlans } from "../../components/sections/pricing-plans";
+import StandOut from "../../components/sections/stand-out";
+import WhoAreWe from "../../components/sections/who-are-we";
+import FAQ from "../../components/sections/faq";
+import { ContactForm } from "../../components/forms/contact-form";
+import { CallToAction } from "@/components/forms/call-to-action";
+import { Footer } from "@/components/global/footer";
 
 export default function Home() {
     return (

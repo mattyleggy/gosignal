@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa6";
-import Section from "./section";
 import { Typography } from "@/components/common/typography";
 import { Logo } from "../common/logo";
+import Section from "../common/section";
 
 const socialLinks = [
     { icon: <FaFacebook className="w-5 h-5" />, href: "#" },

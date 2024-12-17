@@ -3,7 +3,7 @@
 import { Typography } from "@/components/common/typography";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Section from "@/components/sections/section";
+import Section from "@/components/common/section";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

@@ -1,4 +1,4 @@
-import Section from "@/components/sections/section";
+import Section from "@/components/common/section";
 import USPCard from "@/components/common/usp-card";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";

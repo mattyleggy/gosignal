@@ -1,4 +1,4 @@
-import Section from "@/components/sections/section";
+import Section from "@/components/common/section";
 import { GlowCircle } from "@/components/ui/glow-circle";
 import { Typography } from "@/components/common/typography";
 
