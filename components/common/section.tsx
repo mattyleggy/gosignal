@@ -11,7 +11,7 @@ export default function Section({ children, variant = "default", className, back
     return (
         <section
             className={cn(
-                "w-full relative overflow-hidden",
+                "w-full relative",
                 variant === "default" ? "bg-primary-light" : "bg-white"
             )}
             {...(variant === "default" ? {
