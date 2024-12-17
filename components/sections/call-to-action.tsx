@@ -72,7 +72,7 @@ export function CallToAction({ overlapsFooter = false }: CallToActionProps) {
                             Thank You!
                         </Typography>
                         <p className="text-white/80 mb-4">
-                            We've received your request and will call you back shortly.
+                            We&apos;ve received your request and will call you back shortly.
                         </p>
                         <Button
                             variant="secondary"
