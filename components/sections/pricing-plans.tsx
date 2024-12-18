@@ -1,3 +1,4 @@
+"use client"
 import Section from "@/components/common/section";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
@@ -5,50 +6,19 @@ import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlowCircle } from "@/components/ui/glow-circle";
-
-const plans = [
-    {
-        name: "Outright",
-        icon: "🎁",
-        price: "$3,500",
-        originalPrice: "$5,000",
-        description: "/outright with 12 months included changes",
-        features: [
-            "Negotiable terms",
-            "Standard 5 page website (contact us for pricing for larger websites)",
-            ".com.au domain name",
-            "Australian web hosting",
-            "Made by Australian developers",
-            "Included ongoing changes and maintenance",
-            "Generate and capture leads",
-        ],
-        optionalFeatures: [
-            { text: "$60/month maintenance after the first 12 months", included: false },
-        ],
-        popular: false,
-    },
-    {
-        name: "Monthly",
-        icon: "💎",
-        price: "$150",
-        originalPrice: "$250",
-        description: "/month with included ongoing changes",
-        features: [
-            "$0 up-front, risk free",
-            "Standard 5 page website (contact us for pricing for larger websites)",
-            ".com.au domain name",
-            "Australian web hosting",
-            "Made by Australian developers",
-            "Included ongoing changes and maintenance",
-            "Generate and capture leads",
-            "Included free maintenance & changes",
-            "Minimum 12 month commitment",
-        ],
-        popular: true,
-    },
-];
+import { useState } from "react";
+import { GetStartedModal } from "../modals/get-started-modal";
+import { plans } from "@/lib/plans";
 
 export function PricingPlans() {
+    const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string } | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleGetStarted = (plan: { name: string; price: string }) => {
+        setSelectedPlan(plan);
+        setIsModalOpen(true);
+    };
+
     return (
         <Section variant="light" className="relative z-10">
             <div className="text-center space-y-4 mb-12">
@@ -90,7 +60,14 @@ export function PricingPlans() {
                                 <p className="text-sm opacity-80">{plan.description}</p>
                             </div>
 
-                            <Button className={cn("w-full")}>Get Started Now</Button>
+                            <Button
+                                className={cn("w-full")}
+                                onClick={() =>
+                                    handleGetStarted({ name: plan.name, price: plan.price })
+                                }
+                            >
+                                Get Started Now
+                            </Button>
 
                             <ul className="space-y-4">
                                 {plan.features.map((feature) => (
@@ -116,6 +93,14 @@ export function PricingPlans() {
                     </div>
                 ))}
             </div>
+
+            {selectedPlan && (
+                <GetStartedModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    selectedPlan={selectedPlan}
+                />
+            )}
         </Section>
     );
 }
