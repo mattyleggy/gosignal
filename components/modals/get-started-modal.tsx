@@ -25,6 +25,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { submitGetStartedForm } from "@/app/actions/get-started";
 import { phoneNumberSchema } from "@/lib/schemas";
+import { useModalStore } from "@/app/stores/use-modal-store";
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
@@ -33,17 +34,8 @@ const formSchema = z.object({
     plan: z.string(),
 });
 
-interface GetStartedModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    selectedPlan: {
-        name: string;
-        price: string;
-    };
-}
-
-export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedModalProps) {
-    const [isSubmitting, setIsSubmitting] = useState(false);
+export function GetStartedModal() {
+    const { isOpen, selectedPlan, onClose } = useModalStore();
     const { toast } = useToast();
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -52,12 +44,12 @@ export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedMod
             name: "",
             email: "",
             phone: "",
-            plan: selectedPlan.name,
+            plan: selectedPlan?.name,
         },
     });
 
     useEffect(() => {
-        if (isOpen) {
+        if (isOpen && selectedPlan) {
             form.reset({
                 name: "",
                 email: "",
@@ -65,11 +57,10 @@ export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedMod
                 plan: selectedPlan.name,
             });
         }
-    }, [isOpen, selectedPlan.name, form]);
+    }, [isOpen, selectedPlan, form]);
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            setIsSubmitting(true);
             const result = await submitGetStartedForm(values);
 
             if (result.success) {
@@ -92,8 +83,6 @@ export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedMod
                 description: "Something went wrong. Please try again later.",
                 variant: "destructive",
             });
-        } finally {
-            setIsSubmitting(false);
         }
     };
 
@@ -130,7 +119,7 @@ export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedMod
                                                 <SelectItem
                                                     key={plan.name}
                                                     value={plan.name}
-                                                    defaultChecked={selectedPlan.name === plan.name}
+                                                    defaultChecked={selectedPlan?.name === plan.name}
                                                 >
                                                     <div className="flex flex-col">
                                                         <span className="font-medium">
@@ -192,8 +181,8 @@ export function GetStartedModal({ isOpen, onClose, selectedPlan }: GetStartedMod
                             )}
                         />
 
-                        <Button type="submit" className="w-full" disabled={isSubmitting}>
-                            {isSubmitting ? "Submitting..." : "Submit"}
+                        <Button type="submit" className="w-full">
+                            Submit
                         </Button>
                     </form>
                 </Form>

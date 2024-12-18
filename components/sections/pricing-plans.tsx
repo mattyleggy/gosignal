@@ -6,18 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlowCircle } from "@/components/ui/glow-circle";
-import { useState } from "react";
-import { GetStartedModal } from "../modals/get-started-modal";
 import { plans } from "@/lib/plans";
+import { GetStartedModal } from "../modals/get-started-modal";
+import { useModalStore } from "@/app/stores/use-modal-store";
 
 export function PricingPlans() {
-    const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string } | null>(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleGetStarted = (plan: { name: string; price: string }) => {
-        setSelectedPlan(plan);
-        setIsModalOpen(true);
-    };
+    const onOpen = useModalStore((state) => state.onOpen);
 
     return (
         <Section variant="light" className="relative z-10">
@@ -62,9 +56,7 @@ export function PricingPlans() {
 
                             <Button
                                 className={cn("w-full")}
-                                onClick={() =>
-                                    handleGetStarted({ name: plan.name, price: plan.price })
-                                }
+                                onClick={() => onOpen({ name: plan.name, price: plan.price })}
                             >
                                 Get Started Now
                             </Button>
@@ -94,13 +86,7 @@ export function PricingPlans() {
                 ))}
             </div>
 
-            {selectedPlan && (
-                <GetStartedModal
-                    isOpen={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                    selectedPlan={selectedPlan}
-                />
-            )}
+            <GetStartedModal />
         </Section>
     );
 }
