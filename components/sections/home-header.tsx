@@ -1,10 +1,10 @@
 import Header from "@/components/header/header";
-import ImageShuffle from "@/components/header/image-shuffle";
 import { Arrow } from "@/components/common/arrow";
 import { Button } from "@/components/ui/button";
 import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";
 import { FaRegThumbsUp } from "react-icons/fa";
+import ImageShuffle from "../common/image-shuffle";
 
 export default function HomeHeader() {
     return (
@@ -27,7 +27,13 @@ export default function HomeHeader() {
             }
             rightContent={
                 <div className="w-full h-full flex-col md:flex-row flex justify-center md:justify-end items-center md:items-end relative">
-                    <Arrow className="absolute -left-14 top-0" />
+                    {/* Desktop Arrow */}
+                    <Arrow className="absolute -left-14 top-0 hidden md:block" />
+
+                    {/* Mobile Arrow */}
+                    {/* <Arrow className="block md:hidden" flip={true} rotation={180} /> */}
+
+                    {/* USP Card */}
                     <USPCard className="flex flex-row gap-3 justify-center mb-8 md:mb-0 items-center md:absolute right-16 top-14 z-10">
                         <div className="flex justify-center items-center bg-gray-100 rounded-full p-2 w-10 h-10">
                             <FaRegThumbsUp className="text-xl " />
@@ -37,8 +43,12 @@ export default function HomeHeader() {
                             <div className="leading-none text-xs text-gray-500">of experience</div>
                         </div>
                     </USPCard>
+
+                    {/* Image Shuffle */}
                     <ImageShuffle />
-                    <USPCard className="flex flex-row gap-3 justify-center items-center mt-8 md:mt-0 md:absolute left-6 top-48 z-10">
+
+                    {/* USP Card */}
+                    <USPCard className="flex flex-row gap-3 justify-center items-center mt-0 md:mt-0 md:absolute left-6 top-48 z-10">
                         <div className="leading-none whitespace-nowrap">
                             <div className="leading-none font-bold">15+ Years</div>
                             <div className="leading-none text-xs text-gray-500">of experience</div>

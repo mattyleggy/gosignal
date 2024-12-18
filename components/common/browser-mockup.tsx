@@ -8,7 +8,7 @@ interface BrowserMockupProps {
 
 export function BrowserMockup({ url, children, className }: BrowserMockupProps) {
     return (
-        <div className={`bg-white rounded-3xl p-8 shadow-lg ${className || ''}`}>
+        <div className={`bg-white rounded-3xl p-4 shadow-lg ${className || ''}`}>
             {/* Browser controls */}
             <div className="flex items-center gap-2 mb-4">
                 <div className="flex gap-1.5">
@@ -18,7 +18,7 @@ export function BrowserMockup({ url, children, className }: BrowserMockupProps) 
                 </div>
                 <div className="flex-1 max-w-xl mx-auto">
                     <div className="bg-slate-100 rounded-full px-4 py-2 flex items-center gap-2">
-                        <span className="text-slate-600 text-sm truncate">
+                        <span className="text-slate-600 text-sm truncate block w-full max-w-[50vw] md:max-w-full">
                             {url}
                         </span>
                         <ArrowUpRight className="w-4 h-4 text-primary shrink-0" />

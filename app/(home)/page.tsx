@@ -10,6 +10,7 @@ import FAQ from "../../components/sections/faq";
 import { ContactForm } from "../../components/forms/contact-form";
 import { CallToAction } from "@/components/forms/call-to-action";
 import { Footer } from "@/components/global/footer";
+import { CaseStudies } from "@/components/sections/case-studies";
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
             </div>
             <div id="pricing" className="w-full">
                 <PricingSection />
+                <CaseStudies />
                 <PricingPlans />
             </div>
             <div id="about" className="w-full">

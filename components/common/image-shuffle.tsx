@@ -26,7 +26,7 @@ export default function ImageShuffle() {
             </div>
 
             {/* Mobile carousel */}
-            <div className="md:hidden w-full max-w-[300px] mx-auto">
+            <div className="md:hidden w-full mx-auto px-12">
                 <Typography variant="h3" className="text-center mb-4">Previous Projects</Typography>
                 <Carousel
                     opts={{
@@ -41,8 +41,8 @@ export default function ImageShuffle() {
                                     <Image
                                         src={image.src}
                                         alt={image.alt}
-                                        width={300}
-                                        height={300}
+                                        width={1000}
+                                        height={1000}
                                         className={imageStyles}
                                     />
                                 </div>

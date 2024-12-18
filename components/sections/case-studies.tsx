@@ -21,20 +21,20 @@ export function CaseStudies() {
                 </Typography>
             </div>
 
-            <div className="w-full max-w-5xl flex flex-row gap-8 justify-center items-center">
-                <div className="w-[600px]">
+            <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-8 justify-center items-center">
+                <div className="w-full lg:w-[600px]">
                     <BrowserMockup url="https://www.brissieroofing.com.au/">
                         <Image
                             src="/images/website-02.png"
                             alt="Brissie Roofing Website"
                             height={600}
                             width={600}
-                            className="rounded-xl shadow-md bg-contain"
+                            className="rounded-xl shadow-md bg-contain w-full"
                         />
                     </BrowserMockup>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 text-center lg:text-left">
                     <div className="space-y-2">
                         <Badge className="font-normal">November 2024</Badge>
                         <Typography variant="h3">Brissie Roofing</Typography>
