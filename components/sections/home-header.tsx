@@ -33,8 +33,11 @@ export default function HomeHeader() {
                     {/* Mobile Arrow */}
                     {/* <Arrow className="block md:hidden" flip={true} rotation={180} /> */}
 
+                    {/* Image Shuffle */}
+                    <ImageShuffle />
+
                     {/* USP Card */}
-                    <USPCard className="flex flex-row gap-3 justify-center mb-8 md:mb-0 items-center md:absolute right-16 top-14 z-10">
+                    <USPCard className="hidden md:flex flex-row gap-3 justify-center mb-8 md:mb-0 items-center md:absolute right-16 top-14 z-10">
                         <div className="flex justify-center items-center bg-gray-100 rounded-full p-2 w-10 h-10">
                             <FaRegThumbsUp className="text-xl " />
                         </div>
@@ -44,11 +47,8 @@ export default function HomeHeader() {
                         </div>
                     </USPCard>
 
-                    {/* Image Shuffle */}
-                    <ImageShuffle />
-
                     {/* USP Card */}
-                    <USPCard className="flex flex-row gap-3 justify-center items-center mt-0 md:mt-0 md:absolute left-6 top-48 z-10">
+                    <USPCard className="hidden md:flex flex-row gap-3 justify-center items-center mt-0 md:mt-0 md:absolute left-6 top-48 z-10">
                         <div className="leading-none whitespace-nowrap">
                             <div className="leading-none font-bold">15+ Years</div>
                             <div className="leading-none text-xs text-gray-500">of experience</div>

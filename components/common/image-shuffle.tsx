@@ -27,7 +27,7 @@ export default function ImageShuffle() {
 
             {/* Mobile carousel */}
             <div className="md:hidden w-full mx-auto px-12">
-                <Typography variant="h3" className="text-center mb-4">Previous Projects</Typography>
+                {/* <Typography variant="h3" className="text-center mb-4">Previous Projects</Typography> */}
                 <Carousel
                     opts={{
                         align: "center",

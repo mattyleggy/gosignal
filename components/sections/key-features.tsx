@@ -53,7 +53,7 @@ export default function KeyFeatures() {
     ];
 
     return (
-        <div className="mt-20 w-full">
+        <div className="md:mt-20 w-full">
             <Section className="relative pt-0">
                 <Arrow className="absolute right-52 top-56 hidden md:block" rotation={180} flip size={80} />
                 <UspBar usps={usps} className="mb-20 md:mb-0 md:-translate-y-1/2" />
