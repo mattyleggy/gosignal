@@ -86,13 +86,15 @@ export const ContactForm = () => {
 
     return (
         <Section backgroundPosition="top">
-            <div className="w-full max-w-7xl mx-auto px-4 md:px-0">
-                <div className="flex flex-row space-x-16">
+            <div className="w-full max-w-7xl mx-auto px-4">
+                <div className="flex flex-col lg:flex-row lg:space-x-16 space-y-8 lg:space-y-0">
                     {/* Left Panel - Form */}
                     <div className="flex-1 space-y-6">
                         <div className="mb-8 space-y-6">
                             <Badge variant="secondary">Contact Us</Badge>
-                            <Typography variant="h2">Let&apos;s Get In Touch</Typography>
+                            <Typography variant="h2" className="text-3xl md:text-4xl">
+                                Let&apos;s Get In Touch
+                            </Typography>
                         </div>
 
                         <Form {...form}>
@@ -238,8 +240,12 @@ export const ContactForm = () => {
                     </div>
 
                     {/* Right Panel - Image */}
-                    <div className="relative h-full pr-4">
-                        <ImageShadow src="/images/matty-portrait.jpg" alt="Contact Us" />
+                    <div className="relative h-[400px] lg:h-full w-full lg:w-auto lg:pr-4">
+                        <ImageShadow 
+                            src="/images/matty-portrait.jpg" 
+                            alt="Contact Us"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
             </div>
