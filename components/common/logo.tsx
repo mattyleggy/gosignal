@@ -12,7 +12,7 @@ export function Logo({ className, size = 150, ...props }: LogoProps) {
             xmlns="http://www.w3.org/2000/svg"
             className={cn("text-primary", className)}
             width={size}
-            height={(size / 1010) * 211}
+            height={Math.ceil((size / 1010) * 211)}
             {...props}
             viewBox="0 0 563.15 116.98"
         >
