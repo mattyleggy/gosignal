@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Typography } from "../common/typography";
 
 export default function ImageShuffle() {
     const imageStyles = "rounded-lg";
