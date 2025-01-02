@@ -22,7 +22,7 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Aussie Tradie & Medical Websites | Go Signal",
+    title: "Aussie Websites for Tradies & Health Professionals | Go Signal",
     description: "Go Signal is a Brisbane based digital web agency that specialises in creating websites for tradies and health professionals.",
 };
 
