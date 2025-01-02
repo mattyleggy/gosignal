@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { GlowCircle } from "../ui/glow-circle";
 
 export default function ImageShadow({ src, alt }: { src: string; alt: string }) {
     return (
