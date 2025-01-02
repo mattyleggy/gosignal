@@ -243,7 +243,6 @@ export const ContactForm = () => {
                         <ImageShadow 
                             src="/images/matty-portrait.jpg" 
                             alt="Contact Us"
-                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
