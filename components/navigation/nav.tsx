@@ -38,7 +38,7 @@ export default function Nav() {
     ];
 
     return (
-        <nav className="flex justify-between items-center max-w-7xl w-full py-10 px-4">
+        <nav className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0">
             <div className="flex items-center gap-4">
                 <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
