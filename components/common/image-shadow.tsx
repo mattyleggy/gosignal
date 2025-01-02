@@ -12,7 +12,6 @@ export default function ImageShadow({ src, alt }: { src: string; alt: string }) 
                 height={100}
                 className="relative rounded-[300px] rounded-b-3xl z-10"
             />
-            <GlowCircle size="lg" className="absolute -bottom-1/3 -right-1/3 z-10" />
         </div>
     );
 }

@@ -37,6 +37,7 @@ export function ReasonsToChooseUs() {
                     <div className="px-4 lg:px-0">
                         <ImageShadow src="/images/house.png" alt="Modern building" />
 
+                        <GlowCircle size="lg" className="absolute -bottom-1/3 -right-1/3 z-10" />
                         {/* Stats overlay */}
                         <USPCard className="flex flex-row gap-3 justify-center items-center absolute left-6 lg:left-2 top-14 z-10">
                             <IconCircle
