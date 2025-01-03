@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";
 import { FaRegThumbsUp } from "react-icons/fa";
-import ImageShuffle from "../common/image-shuffle";
+import ImageShuffle from "../../../components/common/image-shuffle";
 
 export default function HomeHeader() {
     return (

@@ -1,4 +1,4 @@
-import HomeHeader from "../../components/sections/home-header";
+import HomeHeader from "./_components/home-header";
 import BackgroundGradient from "@/components/header/background-gradient";
 import KeyFeatures from "../../components/sections/key-features";
 import { ReasonsToChooseUs } from "../../components/sections/reasons-to-choose-us";
