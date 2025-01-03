@@ -1,3 +1,5 @@
+"use client";
+
 import UspBar from "@/components/common/usp-bar";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
@@ -5,6 +7,7 @@ import FeatureCard from "@/components/common/feature-card";
 import Section from "@/components/common/section";
 import { FaStar } from "react-icons/fa6";
 import { Arrow } from "@/components/common/arrow";
+import { motion } from "framer-motion";
 
 export default function KeyFeatures() {
     const FaStarIcon = <FaStar className="text-xl" />;
@@ -56,27 +59,33 @@ export default function KeyFeatures() {
         <div className="md:mt-20 w-full">
             <Section className="relative pt-0">
                 <Arrow className="absolute right-52 top-56 hidden md:block" rotation={180} flip size={80} />
-                <UspBar usps={usps} className="mb-20 md:mb-0 md:-translate-y-1/2" />
-                <div className="flex flex-col justify-center items-center text-center gap-4 px-4 md:px-0">
-                    <Badge variant="secondary">Key Features</Badge>
-                    <Typography variant="h2">What We Do</Typography>
-                    <p className="max-w-2xl">
-                        By getting more customers you are also able to increase your rates and be
-                        more selective with your jobs
-                    </p>
-                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-10">
-                        {features.map((feature, index) => (
-                            <FeatureCard
-                                key={index}
-                                icon={feature.icon}
-                                title={feature.title}
-                                variant={feature.variant as "default" | "featured"}
-                            >
-                                {feature.description}
-                            </FeatureCard>
-                        ))}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+                >
+                    <UspBar usps={usps} className="mb-20 md:mb-0 md:-translate-y-1/2" />
+                    <div className="flex flex-col justify-center items-center text-center gap-4 px-4 md:px-0">
+                        <Badge variant="secondary">Key Features</Badge>
+                        <Typography variant="h2">What We Do</Typography>
+                        <p className="max-w-2xl">
+                            By getting more customers you are also able to increase your rates and be
+                            more selective with your jobs
+                        </p>
+                        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-10">
+                            {features.map((feature, index) => (
+                                <FeatureCard
+                                    key={index}
+                                    icon={feature.icon}
+                                    title={feature.title}
+                                    variant={feature.variant as "default" | "featured"}
+                                >
+                                    {feature.description}
+                                </FeatureCard>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </motion.div>
             </Section>
         </div>
     );
