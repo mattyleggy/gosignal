@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 export default function KeyFeatures() {
     const FaStarIcon = <FaStar className="text-xl" />;
-    
+
     const usps = [
         {
             title: "Unlimited Edits",
@@ -58,19 +58,32 @@ export default function KeyFeatures() {
     return (
         <div className="md:mt-20 w-full">
             <Section className="relative pt-0">
-                <Arrow className="absolute right-52 top-56 hidden md:block" rotation={180} flip size={80} />
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-                >
-                    <UspBar usps={usps} className="mb-20 md:mb-0 md:-translate-y-1/2" />
-                    <div className="flex flex-col justify-center items-center text-center gap-4 px-4 md:px-0">
+                <Arrow
+                    className="absolute right-52 top-56 hidden md:block"
+                    rotation={180}
+                    flip
+                    size={80}
+                />
+                <div>
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+                    >
+                        <UspBar usps={usps} className="mb-20 md:mb-0 md:-translate-y-1/2" />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="flex flex-col justify-center items-center text-center gap-4 px-4 md:px-0"
+                    >
                         <Badge variant="secondary">Key Features</Badge>
                         <Typography variant="h2">What We Do</Typography>
                         <p className="max-w-2xl">
-                            By getting more customers you are also able to increase your rates and be
-                            more selective with your jobs
+                            By getting more customers you are also able to increase your rates and
+                            be more selective with your jobs
                         </p>
                         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-10">
                             {features.map((feature, index) => (
@@ -84,8 +97,8 @@ export default function KeyFeatures() {
                                 </FeatureCard>
                             ))}
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
             </Section>
         </div>
     );
