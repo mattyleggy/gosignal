@@ -23,6 +23,10 @@ import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect, useRef } from "react";
 import ImageShadow from "../common/image-shadow";
 
+interface ContactFormProps {
+    variant?: "default" | "light" | "dark";
+}
+
 // Form validation schema
 const formSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -32,7 +36,7 @@ const formSchema = z.object({
     message: z.string().optional(),
 });
 
-export const ContactForm = () => {
+export const ContactForm = ({ variant = "default" }: ContactFormProps) => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -84,7 +88,7 @@ export const ContactForm = () => {
     };
 
     return (
-        <Section backgroundPosition="top">
+        <Section backgroundPosition="top" variant={variant}>
             <div className="w-full max-w-7xl mx-auto px-4">
                 <div className="flex flex-col lg:flex-row lg:space-x-16 space-y-8 lg:space-y-0">
                     {/* Left Panel - Form */}
