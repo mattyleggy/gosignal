@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface LogoProps extends React.SVGProps<SVGSVGElement> {
     className?: string;
@@ -40,102 +43,113 @@ export function Logo({ className, size = 150, ...props }: LogoProps) {
                 d="M563.15,13.43v75.78h-13.71V6.76h7.17c3.55,0,6.54,3.05,6.54,6.67Z"
                 className="fill-black"
             />
-            <polygon
-                points="125.39 11.8 131.85 11.8 130.25 32.14 126.98 32.14 125.39 11.8"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="145.67 15.5 151.26 18.73 139.71 35.55 136.88 33.91 145.67 15.5"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="161.38 28.85 164.61 34.44 146.19 43.23 144.56 40.4 161.38 28.85"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="168.31 48.26 168.31 54.72 147.97 53.13 147.97 49.86 168.31 48.26"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="164.61 68.54 161.38 74.14 144.56 62.58 146.19 59.75 164.61 68.54"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="131.85 91.19 125.39 91.19 126.98 70.84 130.25 70.84 131.85 91.19"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="111.57 87.48 105.97 84.25 117.53 67.43 120.35 69.07 111.57 87.48"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="95.85 74.14 92.62 68.54 111.04 59.75 112.67 62.58 95.85 74.14"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="88.92 54.72 88.92 48.26 109.27 49.86 109.27 53.13 88.92 54.72"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="92.62 34.44 95.85 28.85 112.67 40.4 111.04 43.23 92.62 34.44"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="105.97 18.73 111.57 15.5 120.35 33.91 117.53 35.55 105.97 18.73"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="134.89 21.76 137.07 19.96 138.05 22.6 133.63 32.8 134.89 21.76"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="148.92 28.88 151.7 28.41 151.23 31.19 142.3 37.81 148.92 28.88"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="157.51 42.06 160.15 43.04 158.35 45.22 147.31 46.48 157.51 42.06"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="158.35 57.77 160.15 59.94 157.51 60.92 147.31 56.5 158.35 57.77"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="151.23 71.79 151.7 74.58 148.92 74.1 142.3 65.17 151.23 71.79"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="138.05 80.38 137.07 83.02 134.89 81.23 133.63 70.19 138.05 80.38"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="122.34 81.22 122.34 81.22 120.17 83.02 119.18 80.38 123.61 70.19 122.34 81.22"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="108.31 74.1 105.53 74.57 106 71.79 106 71.79 114.93 65.17 108.31 74.1"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="99.73 60.92 97.08 59.94 98.88 57.77 109.92 56.5 99.73 60.92"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="98.88 45.22 97.08 43.04 99.73 42.06 99.73 42.06 109.92 46.48 98.88 45.22"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="106 31.19 105.53 28.41 108.31 28.88 114.94 37.81 106 31.19"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="119.18 22.6 120.17 19.96 122.34 21.76 123.61 32.8 119.18 22.6"
-                className="fill-primary fill-rule-evenodd"
-            />
-            <polygon
-                points="145.67 87.48 136.88 69.07 139.71 67.43 151.26 84.25 145.67 87.48"
-                className="fill-primary fill-rule-evenodd"
-            />
+            <motion.g
+                animate={{
+                    rotate: [0, 180, 0]
+                }}
+                transition={{
+                    duration: 0.6,
+                    repeat: Infinity,
+                    repeatDelay: 4
+                }}
+            >
+                <polygon
+                    points="125.39 11.8 131.85 11.8 130.25 32.14 126.98 32.14 125.39 11.8"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="145.67 15.5 151.26 18.73 139.71 35.55 136.88 33.91 145.67 15.5"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="161.38 28.85 164.61 34.44 146.19 43.23 144.56 40.4 161.38 28.85"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="168.31 48.26 168.31 54.72 147.97 53.13 147.97 49.86 168.31 48.26"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="164.61 68.54 161.38 74.14 144.56 62.58 146.19 59.75 164.61 68.54"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="131.85 91.19 125.39 91.19 126.98 70.84 130.25 70.84 131.85 91.19"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="111.57 87.48 105.97 84.25 117.53 67.43 120.35 69.07 111.57 87.48"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="95.85 74.14 92.62 68.54 111.04 59.75 112.67 62.58 95.85 74.14"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="88.92 54.72 88.92 48.26 109.27 49.86 109.27 53.13 88.92 54.72"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="92.62 34.44 95.85 28.85 112.67 40.4 111.04 43.23 92.62 34.44"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="105.97 18.73 111.57 15.5 120.35 33.91 117.53 35.55 105.97 18.73"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="134.89 21.76 137.07 19.96 138.05 22.6 133.63 32.8 134.89 21.76"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="148.92 28.88 151.7 28.41 151.23 31.19 142.3 37.81 148.92 28.88"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="157.51 42.06 160.15 43.04 158.35 45.22 147.31 46.48 157.51 42.06"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="158.35 57.77 160.15 59.94 157.51 60.92 147.31 56.5 158.35 57.77"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="151.23 71.79 151.7 74.58 148.92 74.1 142.3 65.17 151.23 71.79"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="138.05 80.38 137.07 83.02 134.89 81.23 133.63 70.19 138.05 80.38"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="122.34 81.22 122.34 81.22 120.17 83.02 119.18 80.38 123.61 70.19 122.34 81.22"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="108.31 74.1 105.53 74.57 106 71.79 106 71.79 114.93 65.17 108.31 74.1"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="99.73 60.92 97.08 59.94 98.88 57.77 109.92 56.5 99.73 60.92"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="98.88 45.22 97.08 43.04 99.73 42.06 99.73 42.06 109.92 46.48 98.88 45.22"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="106 31.19 105.53 28.41 108.31 28.88 114.94 37.81 106 31.19"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="119.18 22.6 120.17 19.96 122.34 21.76 123.61 32.8 119.18 22.6"
+                    className="fill-primary fill-rule-evenodd"
+                />
+                <polygon
+                    points="145.67 87.48 136.88 69.07 139.71 67.43 151.26 84.25 145.67 87.48"
+                    className="fill-primary fill-rule-evenodd"
+                />
+            </motion.g>
             <path
                 d="M44.22,42.17v5.59c0,5.07,4.03,9.1,9.1,9.1h10.66c-1.95,10.66-9.1,18.86-21.32,18.86-16.25-1.17-24.18-11.58-24.05-30.95.13-19.37,7.93-28.99,23.14-28.99,8.58,0,14.69,3.51,18.2,10.66,2.08,2.99,4.68,4.55,7.93,4.55h11.19c-.65-10.01-4.42-17.68-11.19-23.15C60.47,2.64,51.5.04,41.23.04,15.1-1-.38,19.55,0,45.68,0,71.56,15.36,91.19,40.71,91.19c12.74,0,19.11-4.42,25.35-12.48l.78,4.29c.4,4.03,4.56,6.89,8.85,6.89h4.55v-47.72h-36.02Z"
                 className="fill-primary"

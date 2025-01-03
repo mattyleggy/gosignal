@@ -28,7 +28,7 @@ export default function HomeHeader() {
             rightContent={
                 <div className="w-full h-full flex-col md:flex-row flex justify-center md:justify-end items-center md:items-end relative">
                     {/* Desktop Arrow */}
-                    <Arrow className="absolute -left-14 top-0 hidden md:block" />
+                    <Arrow className="absolute -left-14 top-0 hidden md:block" delay={1.2} />
 
                     {/* Mobile Arrow */}
                     {/* <Arrow className="block md:hidden" flip={true} rotation={180} /> */}

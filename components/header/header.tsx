@@ -1,6 +1,8 @@
+"use client"
 import { Badge } from "../ui/badge";
 import { GlowCircle } from "../ui/glow-circle";
 import { Typography } from "../common/typography";
+import { motion } from "framer-motion";
 
 export default function Header({
     badge,
@@ -18,7 +20,13 @@ export default function Header({
     return (
         <header className="flex flex-col md:flex-row gap-8 md:gap-4 w-full max-w-7xl py-6 md:py-10 relative px-4 md:px-0">
             <GlowCircle size="lg" className="hidden md:block -left-1/4 top-10" />
-            <div className="w-full md:w-1/2 flex flex-col gap-4 items-center md:items-start justify-center text-center md:text-left">
+            <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="w-full md:w-1/2 flex flex-col gap-4 items-center md:items-start justify-center text-center md:text-left"
+            >
                 {badge && <Badge variant={"secondary"}>{badge}</Badge>}
                 <Typography variant="h1" className="w-full md:w-4/5">
                     {title}
@@ -27,10 +35,16 @@ export default function Header({
                 <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 items-center md:items-start">
                     {buttons}
                 </div>
-            </div>
-            <div className="w-full md:w-1/2 flex justify-center">
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="w-full md:w-1/2 flex justify-center"
+            >
                 {rightContent}
-            </div>
+            </motion.div>
         </header>
     );
 }
