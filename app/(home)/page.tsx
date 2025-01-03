@@ -8,8 +8,6 @@ import StandOut from "../../components/sections/stand-out";
 import WhoAreWe from "../../components/sections/who-are-we";
 import FAQ from "../../components/sections/faq";
 import { ContactForm } from "../../components/forms/contact-form";
-import { CallToAction } from "@/components/forms/call-to-action";
-import { Footer } from "@/components/global/footer";
 import { CaseStudies } from "@/components/sections/case-studies";
 
 export default function Home() {

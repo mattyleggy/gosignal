@@ -24,7 +24,7 @@ import { useState, useEffect, useRef } from "react";
 import ImageShadow from "../common/image-shadow";
 
 interface ContactFormProps {
-    variant?: "default" | "light" | "dark";
+    variant?: "default" | "light";
 }
 
 // Form validation schema

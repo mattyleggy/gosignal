@@ -1,6 +1,4 @@
 import { ContactForm } from "@/components/forms/contact-form";
-import { Typography } from "@/components/common/typography";
-
 export const metadata = {
     title: "Contact Us | GoSignal",
     description: "Get in touch with GoSignal. We're here to help you with your digital marketing needs.",
