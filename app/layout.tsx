@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/navigation/nav";
 import { Toaster } from "@/components/ui/toaster";
+import { CallToAction } from "@/components/forms/call-to-action";
+import { Footer } from "@/components/global/footer";
 
 const poppins = localFont({
     src: [
@@ -23,7 +25,8 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
     title: "Aussie Websites for Tradies & Health Professionals | Go Signal",
-    description: "Go Signal is a Brisbane based digital web agency that specialises in creating websites for tradies and health professionals.",
+    description:
+        "Go Signal is a Brisbane based digital web agency that specialises in creating websites for tradies and health professionals.",
 };
 
 export default function RootLayout({
@@ -39,6 +42,9 @@ export default function RootLayout({
                     <main className="flex flex-col items-center">
                         <Nav />
                         {children}
+
+                        <CallToAction overlapsFooter={true} />
+                        <Footer hasCta={true} />
                     </main>
                 </div>
             </body>

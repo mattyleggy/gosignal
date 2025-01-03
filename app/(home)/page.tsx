@@ -35,8 +35,6 @@ export default function Home() {
                 <FAQ />
                 <ContactForm />
             </div>
-            <CallToAction overlapsFooter={true} />
-            <Footer hasCta={true} />
         </>
     );
 }

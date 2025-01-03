@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { GlowCircle } from "@/components/ui/glow-circle";
 import { plans } from "@/lib/plans";
 import { GetStartedModal } from "../modals/get-started-modal";
-import { useModalStore } from "@/app/stores/use-modal-store";
+import { useModalStore } from "@/stores/use-modal-store";
 
 export function PricingPlans() {
     const onOpen = useModalStore((state) => state.onOpen);

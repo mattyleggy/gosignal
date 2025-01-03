@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { submitCallbackForm } from "@/app/actions/callback";
+import { submitCallbackForm } from "@/actions/callback";
 import { useState } from "react";
 import { phoneNumberSchema } from "@/lib/schemas";
 

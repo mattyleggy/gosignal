@@ -75,7 +75,7 @@ export default function Nav() {
                         <li key={link.href}>
                             <Link
                                 href={link.href}
-                                onClick={(e) => handleNavigation(e, link.href, link.sectionId)}
+                                
                             >
                                 {link.label}
                             </Link>

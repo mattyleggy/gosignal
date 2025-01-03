@@ -23,9 +23,9 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { submitGetStartedForm } from "@/app/actions/get-started";
+import { submitGetStartedForm } from "@/actions/get-started";
 import { phoneNumberSchema } from "@/lib/schemas";
-import { useModalStore } from "@/app/stores/use-modal-store";
+import { useModalStore } from "@/stores/use-modal-store";
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
