@@ -40,9 +40,6 @@ export default function Nav() {
 
     return (
         <motion.nav
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
             className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0"
         >
             <div className="flex items-center gap-4">
