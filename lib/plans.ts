@@ -1,5 +1,14 @@
 export const plans = [
     {
+        name: "I'm not sure (I want to find out more)",
+        icon: "🤷‍♂️",
+        price: "$TBD",
+        originalPrice: "$TBD",
+        description: "",
+        features: ["I'm not sure"],
+        popular: false,
+    },
+    {
         name: "Outright",
         icon: "🎁",
         price: "$3,500",
@@ -38,4 +47,4 @@ export const plans = [
         ],
         popular: true,
     },
-]; 
+];

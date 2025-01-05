@@ -6,6 +6,7 @@ import { Logo } from "../common/logo";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
+import StartFreeButton from "../common/start-free-button";
 
 export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,9 +40,7 @@ export default function Nav() {
     ];
 
     return (
-        <motion.nav
-            className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0"
-        >
+        <nav className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0">
             <div className="flex items-center gap-4">
                 <button
                     className="lg:hidden"
@@ -83,7 +82,7 @@ export default function Nav() {
                     <FaPhoneAlt className="text-sm" />
                     <span>(07) 2115 6299</span>
                 </div>
-                <Button className="hidden lg:block text-sm px-4 py-2">Start For Free</Button>
+                <StartFreeButton />
             </div>
             {isMobileMenuOpen && (
                 <div className="lg:hidden absolute top-[5rem] left-0 right-0 bg-white shadow-lg p-4 z-50">
@@ -95,10 +94,10 @@ export default function Nav() {
                         ))}
                     </ul>
                     <div className="flex flex-col gap-2 mt-4">
-                        <Button className="text-sm px-4 py-2">Start For Free</Button>
+                        <StartFreeButton />
                     </div>
                 </div>
             )}
-        </motion.nav>
+        </nav>
     );
 }

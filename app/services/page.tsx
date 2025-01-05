@@ -1,7 +1,7 @@
-import ServicesHero from "@/components/sections/services-hero";
 import OurServices from "@/components/sections/our-services";
-import ServiceProcess from "@/components/sections/service-process";
 import ServiceFeatures from "@/components/sections/service-features";
+import ServiceProcess from "@/components/sections/service-process";
+import ServicesHero from "@/components/sections/services-hero";
 
 export const metadata = {
     title: "Our Services | Go Signal",

@@ -26,12 +26,14 @@ import { useToast } from "@/hooks/use-toast";
 import { submitGetStartedForm } from "@/actions/get-started";
 import { phoneNumberSchema } from "@/lib/schemas";
 import { useModalStore } from "@/stores/use-modal-store";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
     phone: phoneNumberSchema,
     plan: z.string(),
+    message: z.string().optional(),
 });
 
 export function GetStartedModal() {
@@ -45,6 +47,7 @@ export function GetStartedModal() {
             email: "",
             phone: "",
             plan: selectedPlan?.name,
+            message: "",
         },
     });
 
@@ -55,6 +58,7 @@ export function GetStartedModal() {
                 email: "",
                 phone: "",
                 plan: selectedPlan.name,
+                message: "",
             });
         }
     }, [isOpen, selectedPlan, form]);
@@ -96,49 +100,6 @@ export function GetStartedModal() {
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                         <FormField
                             control={form.control}
-                            name="plan"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Selected Plan</FormLabel>
-                                    <Select
-                                        onValueChange={field.onChange}
-                                        value={field.value}
-                                        defaultValue={field.value}
-                                    >
-                                        <FormControl>
-                                            <SelectTrigger>
-                                                <SelectValue placeholder="Select a plan">
-                                                    {field.value &&
-                                                        plans.find((p) => p.name === field.value)
-                                                            ?.name}
-                                                </SelectValue>
-                                            </SelectTrigger>
-                                        </FormControl>
-                                        <SelectContent>
-                                            {plans.map((plan) => (
-                                                <SelectItem
-                                                    key={plan.name}
-                                                    value={plan.name}
-                                                    defaultChecked={selectedPlan?.name === plan.name}
-                                                >
-                                                    <div className="flex flex-col">
-                                                        <span className="font-medium">
-                                                            {plan.name}
-                                                        </span>
-                                                        <span className="text-sm text-muted-foreground">
-                                                            {plan.price} {plan.description}
-                                                        </span>
-                                                    </div>
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                        <FormField
-                            control={form.control}
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
@@ -175,6 +136,68 @@ export function GetStartedModal() {
                                     <FormLabel>Phone</FormLabel>
                                     <FormControl>
                                         <Input placeholder="Your phone number" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="plan"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Plan</FormLabel>
+                                    <Select
+                                        onValueChange={field.onChange}
+                                        value={field.value}
+                                        defaultValue={field.value}
+                                    >
+                                        <FormControl>
+                                            <SelectTrigger>
+                                                <SelectValue placeholder="Select a plan">
+                                                    {field.value &&
+                                                        plans.find((p) => p.name === field.value)
+                                                            ?.name}
+                                                </SelectValue>
+                                            </SelectTrigger>
+                                        </FormControl>
+                                        <SelectContent>
+                                            {plans.map((plan) => (
+                                                <SelectItem
+                                                    key={plan.name}
+                                                    value={plan.name}
+                                                    defaultChecked={
+                                                        selectedPlan?.name === plan.name
+                                                    }
+                                                >
+                                                    <div className="flex flex-col">
+                                                        <span className="font-medium">
+                                                            {plan.name}
+                                                        </span>
+                                                        <span className="text-sm text-muted-foreground">
+                                                            {plan.price} {plan.description}
+                                                        </span>
+                                                    </div>
+                                                </SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="message"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Message (Optional)</FormLabel>
+                                    <FormControl>
+                                        <Textarea 
+                                            placeholder="Leave us a message..."
+                                            className="resize-none"
+                                            {...field}
+                                        />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
