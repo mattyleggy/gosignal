@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Button } from "../ui/button";
 import { useState } from "react";
 import { Logo } from "../common/logo";
-import { useScrollToSection } from "../../hooks/useScrollToSection";
-import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import StartFreeButton from "../common/start-free-button";
 

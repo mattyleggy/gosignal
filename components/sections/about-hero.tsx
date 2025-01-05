@@ -13,7 +13,7 @@ export default function AboutHero() {
                         Crafting Digital Excellence for Australian Businesses
                     </Typography>
                     <p className="text-lg text-muted-foreground">
-                        Since 2022, we've been transforming how tradies and health professionals
+                        Since 2022, we&apos;ve been transforming how tradies and health professionals
                         connect with their customers online. Based in Brisbane, we combine local
                         insight with technical expertise to deliver websites that drive real
                         business growth.
