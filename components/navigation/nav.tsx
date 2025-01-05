@@ -77,7 +77,7 @@ export default function Nav() {
                 <ul className="flex gap-10 items-center w-full">
                     {navigationLinks.map((link) => (
                         <li key={link.href}>
-                            <Link href={link.href}>{link.label}</Link>
+                            <a href={link.href}>{link.label}</a>
                         </li>
                     ))}
                 </ul>
@@ -94,12 +94,7 @@ export default function Nav() {
                     <ul className="flex flex-col gap-4">
                         {navigationLinks.map((link) => (
                             <li key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    onClick={(e) => handleNavigation(e, link.href, link.sectionId)}
-                                >
-                                    {link.label}
-                                </Link>
+                                <a href={link.href}>{link.label}</a>
                             </li>
                         ))}
                     </ul>
