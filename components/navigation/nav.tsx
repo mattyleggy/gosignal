@@ -9,7 +9,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { handleNavigation } = useScrollToSection();
 
     const navigationLinks = [
         {
