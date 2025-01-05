@@ -86,7 +86,7 @@ export default function WhoAreWe() {
                         location="Brisbane, Australia"
                     />
                     <TeamMember
-                        image="/images/matty-john.jpg"
+                        image="/images/jenn.png"
                         name="Jennifer Lisa"
                         role="Senior Marketing Consultant"
                         location="Brisbane, Australia"

@@ -5,6 +5,7 @@ import Nav from "@/components/navigation/nav";
 import { Toaster } from "@/components/ui/toaster";
 import { CallToAction } from "@/components/forms/call-to-action";
 import { Footer } from "@/components/global/footer";
+import { ContactForm } from "@/components/forms/contact-form";
 
 const poppins = localFont({
     src: [
@@ -43,6 +44,7 @@ export default function RootLayout({
                         <Nav />
                         {children}
 
+                        <ContactForm />
                         <CallToAction overlapsFooter={true} />
                         <Footer hasCta={true} />
                     </main>

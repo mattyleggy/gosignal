@@ -14,25 +14,15 @@ export default function Home() {
     return (
         <>
             <BackgroundGradient />
-
             <HomeHeader />
-            <div id="services" className="w-full">
-                <KeyFeatures />
-                <ReasonsToChooseUs />
-            </div>
-            <div id="pricing" className="w-full">
-                <PricingSection />
-                <CaseStudies />
-                <PricingPlans />
-            </div>
-            <div id="about" className="w-full">
-                <StandOut />
-                <WhoAreWe />
-            </div>
-            <div id="contact" className="w-full">
-                <FAQ />
-                <ContactForm />
-            </div>
+            <KeyFeatures />
+            <ReasonsToChooseUs />
+            <PricingSection />
+            <CaseStudies />
+            <PricingPlans />
+            <StandOut />
+            <WhoAreWe />
+            <FAQ />
         </>
     );
 }

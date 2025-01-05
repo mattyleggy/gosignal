@@ -7,8 +7,6 @@ export const metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="flex w-full min-h-screen flex-col items-center justify-between">
-            <ContactForm />
-        </main>
+        <></>
     );
 }
