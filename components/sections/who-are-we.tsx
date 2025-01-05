@@ -87,8 +87,8 @@ export default function WhoAreWe() {
                     />
                     <TeamMember
                         image="/images/matty-john.jpg"
-                        name="Matty John"
-                        role="Owner, Developer & Designer"
+                        name="Jennifer Lisa"
+                        role="Senior Marketing Consultant"
                         location="Brisbane, Australia"
                     />
                 </div>

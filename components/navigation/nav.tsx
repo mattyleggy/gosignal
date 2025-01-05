@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Logo } from "../common/logo";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
 import { motion } from "framer-motion";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,39 +15,42 @@ export default function Nav() {
         {
             label: "Home",
             href: "/",
-            sectionId: "home"
+            sectionId: "home",
         },
         {
             label: "Services",
             href: "/services",
-            sectionId: "services"
+            sectionId: "services",
         },
         {
             label: "Pricing",
             href: "/pricing",
-            sectionId: "pricing"
+            sectionId: "pricing",
         },
         {
             label: "About Us",
             href: "/about",
-            sectionId: "about"
+            sectionId: "about",
         },
         {
             label: "Contact",
             href: "/contact",
-            sectionId: "contact"
+            sectionId: "contact",
         },
     ];
 
     return (
-        <motion.nav 
+        <motion.nav
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0"
         >
             <div className="flex items-center gap-4">
-                <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                <button
+                    className="lg:hidden"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         {isMobileMenuOpen ? (
                             <path
@@ -73,20 +77,16 @@ export default function Nav() {
                 <ul className="flex gap-10 items-center w-full">
                     {navigationLinks.map((link) => (
                         <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                
-                            >
-                                {link.label}
-                            </Link>
+                            <Link href={link.href}>{link.label}</Link>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div className="flex items-center gap-2">
-                <Button variant={"outline"} className="text-sm px-4 py-2">
-                    Contact Sales
-                </Button>
+            <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
+                <div className="flex items-center gap-2">
+                    <FaPhoneAlt className="text-sm" />
+                    <span>(07) 2115 6299</span>
+                </div>
                 <Button className="hidden lg:block text-sm px-4 py-2">Start For Free</Button>
             </div>
             {isMobileMenuOpen && (
