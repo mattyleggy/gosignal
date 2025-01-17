@@ -10,18 +10,18 @@ import {
 export default function ImageShuffle() {
     const imageStyles = "rounded-lg";
     const images = [
-        { src: "/images/website-01.png", alt: "Hero Image" },
-        { src: "/images/website-02.png", alt: "Hero Image" },
-        { src: "/images/website-03.png", alt: "Hero Image" },
+        { src: "/images/portfolio/painting.png", alt: "Hero Image" },
+        { src: "/images/portfolio/roofing.png", alt: "Hero Image" },
+        { src: "/images/portfolio/saas.png", alt: "Hero Image" },
     ];
 
     return (
         <>
             {/* Desktop layout */}
-            <div className="relative w-[540px] h-[470px] hidden md:block">
-                <Image src="/images/website-01.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute top-0 left-[15%]`} />
-                <Image src="/images/website-02.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute top-[35%] left-[50%]`} />
-                <Image src="/images/website-03.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute bottom-0 left-0`} />
+            <div className="relative w-[540px] h-[490px] hidden md:block">
+                <Image src="/images/portfolio/painting.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute top-0 left-[15%]`} />
+                <Image src="/images/portfolio/chess.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute top-[35%] left-[50%]`} />
+                <Image src="/images/portfolio/roofing.png" alt="Hero Image" width={250} height={250} className={`${imageStyles} absolute bottom-5 left-10`} />
             </div>
 
             {/* Mobile carousel */}
