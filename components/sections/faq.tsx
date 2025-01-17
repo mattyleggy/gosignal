@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         question: "How Long Does It Take For Me To Get A Website Up And Running?",
-        answer: "We typically complete websites within 7 days of receiving your content and requirements.",
+        answer: "We typically complete websites within 14 days of receiving your content and requirements.",
     },
     {
         question: "Can I Talk To Someone In Australia?",

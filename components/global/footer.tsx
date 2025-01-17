@@ -42,7 +42,7 @@ export function Footer({ hasCta = false }: FooterProps) {
                     <div className="space-y-4">                        
                         <Logo size={200} />
                         <p className="text-muted-foreground">
-                            Give your business the green light it needs
+                        We give your business the <span className="font-bold">go signal</span> to get online and start bringing in customers.
                         </p>
                         <div className="flex gap-4">
                             {socialLinks.map((social, index) => (

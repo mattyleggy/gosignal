@@ -30,24 +30,24 @@ export default function KeyFeatures() {
 
     const features = [
         {
-            title: "Unlimited Edits",
+            title: "Included Edits",
             icon: FaStarIcon,
             description:
-                "Our websites are designed to work perfectly on mobile and desktop devices.",
+                "We include edits in your website package, so you can keep your website content up-to-date.",
             variant: "default",
         },
         {
-            title: "7 Day Turnaround",
+            title: "Fast Turnaround",
             icon: FaStarIcon,
             description:
-                "Transform your online presence with our expert web design, development, and digital marketing solutions. Boost your business today!",
+                "We typically complete websites within 14 days of receiving your content and requirements. Our process is efficient and we never compromise on quality.",
             variant: "featured",
         },
         {
             title: "We handle everything",
             icon: FaStarIcon,
             description:
-                "Transform your online presence with our expert web design, development, and digital marketing solutions.",
+                "We handle everything for you. You can focus on your business while we handle the rest.",
             variant: "default",
         },
     ];
