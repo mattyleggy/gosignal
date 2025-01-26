@@ -85,8 +85,6 @@ export function PricingPlans() {
                     </div>
                 ))}
             </div>
-
-            <GetStartedModal />
         </Section>
     );
 }

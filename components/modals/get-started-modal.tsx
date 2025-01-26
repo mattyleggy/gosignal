@@ -92,7 +92,7 @@ export function GetStartedModal() {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="max-w-[425px] max-h-[calc(100vh-40px)] w-[calc(100vw-40px)] overflow-y-auto">
                 <DialogHeader>
                     <DialogTitle>Plan Enquiry Form</DialogTitle>
                 </DialogHeader>
