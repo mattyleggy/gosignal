@@ -62,8 +62,7 @@ export function CallToAction({ overlapsFooter = false }: CallToActionProps) {
                 </Typography>
 
                 <p className="text-white/80 max-w-2xl mx-auto">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
+                    Leave your phone number and we&apos;ll call you back ASAP to discuss how we can help grow your business.
                 </p>
 
                 {isSuccess ? (
@@ -85,7 +84,7 @@ export function CallToAction({ overlapsFooter = false }: CallToActionProps) {
                 ) : (
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-xl mx-auto">
-                            <div className="flex gap-4">
+                            <div className="flex flex-col md:flex-row gap-4">
                                 <FormField
                                     control={form.control}
                                     name="contactNumber"

@@ -23,9 +23,9 @@ const footerLinks = {
         { label: "Services", href: "#" },
     ],
     contact: [
-        { label: "loremipsum@email.com", icon: "📧" },
-        { label: "+1(123) 456 76890", icon: "📞" },
-        { label: "Lorem ipsum", icon: "📍" },
+        { label: "hello@gosignal.com.au", icon: "📧" },
+        { label: "(07) 2115 6299", icon: "📞" },
+        { label: "Brisbane, QLD", icon: "📍" },
     ],
 };
 
@@ -35,11 +35,11 @@ interface FooterProps {
 
 export function Footer({ hasCta = false }: FooterProps) {
     return (
-        <footer className={`bg-background ${hasCta ? 'pt-32' : 'pt-16'} pb-16 relative`}>
+        <footer className={`bg-background ${hasCta ? 'pt-32' : 'pt-16'} pb-16 relative w-full`}>
             <Section variant="light">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="flex flex-col md:flex-row gap-12 w-full justify-between">
                     {/* Logo and Description */}
-                    <div className="space-y-4">                        
+                    <div className="space-y-4 max-w-xs">                        
                         <Logo size={200} />
                         <p className="text-muted-foreground">
                         We give your business the <span className="font-bold">go signal</span> to get online and start bringing in customers.

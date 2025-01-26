@@ -7,6 +7,7 @@ export const plans = [
         description: "",
         features: ["I'm not sure"],
         popular: false,
+        visibleOnPage: false
     },
     {
         name: "Outright",
@@ -27,6 +28,7 @@ export const plans = [
             { text: "$60/month maintenance after the first 12 months", included: false },
         ],
         popular: false,
+        visibleOnPage: true
     },
     {
         name: "Monthly",
@@ -46,5 +48,6 @@ export const plans = [
             "Minimum 12 month commitment",
         ],
         popular: true,
+        visibleOnPage: true
     },
 ];
