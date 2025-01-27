@@ -1,3 +1,12 @@
+import Image from "next/image";
 export default function Page() {
-    return <>Hi</>;
+    return (
+        <Image
+            src="/images/preview/peach-chess.png"
+            alt="Peach Chess"
+            width={1000}
+            height={1000}
+            style={{ width: "100%", height: "auto" }}
+        />
+    );
 }
