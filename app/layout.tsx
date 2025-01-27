@@ -39,19 +39,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${poppins.variable} antialiased`}>
-                <Toaster />
-                <div id="home" className="w-full">
-                    <main className="flex flex-col items-center">
-                        <Nav />
-                        {children}
-
-                        <ContactForm />
-                        <CallToAction overlapsFooter={true} />
-                        <Footer hasCta={true} />
-                    </main>
-                </div>
-
-                <GetStartedModal />
+                {children}
             </body>
         </html>
     );
