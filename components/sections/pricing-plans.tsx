@@ -7,7 +7,6 @@ import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlowCircle } from "@/components/ui/glow-circle";
 import { plans } from "@/lib/plans";
-import { GetStartedModal } from "../modals/get-started-modal";
 import { useModalStore } from "@/stores/use-modal-store";
 
 export function PricingPlans() {

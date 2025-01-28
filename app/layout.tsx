@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Nav from "@/components/navigation/nav";
-import { Toaster } from "@/components/ui/toaster";
-import { CallToAction } from "@/components/forms/call-to-action";
-import { Footer } from "@/components/global/footer";
-import { ContactForm } from "@/components/forms/contact-form";
-import { GetStartedModal } from "@/components/modals/get-started-modal";
 
 const poppins = localFont({
     src: [
