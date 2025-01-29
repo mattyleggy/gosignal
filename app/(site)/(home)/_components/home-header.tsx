@@ -1,9 +1,7 @@
 import Header from "@/components/header/header";
 import { Arrow } from "@/components/common/arrow";
 import { Button } from "@/components/ui/button";
-import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";
-import { FaRegThumbsUp } from "react-icons/fa";
 import Image from "next/image";
 
 export default function HomeHeader() {

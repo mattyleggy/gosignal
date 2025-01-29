@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Logo } from "../common/logo";
 import { FaPhoneAlt } from "react-icons/fa";
 import StartFreeButton from "../common/start-free-button";
+import Link from "next/link";
 
 export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,9 +61,9 @@ export default function Nav() {
                         )}
                     </svg>
                 </button>
-                <a href="/">
+                <Link href="/">
                     <Logo />
-                </a>
+                </Link>
             </div>
             <div className="hidden lg:block">
                 <ul className="flex gap-10 items-center w-full">
