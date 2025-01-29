@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "../common/logo";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -61,9 +60,9 @@ export default function Nav() {
                         )}
                     </svg>
                 </button>
-                <Link href="/">
+                <a href="/">
                     <Logo />
-                </Link>
+                </a>
             </div>
             <div className="hidden lg:block">
                 <ul className="flex gap-10 items-center w-full">

@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import USPCard from "@/components/common/usp-card";
 import { ArrowRightIcon } from "lucide-react";
 import { FaRegThumbsUp } from "react-icons/fa";
-import ImageShuffle from "../../../../components/common/image-shuffle";
+import Image from "next/image";
 
 export default function HomeHeader() {
     return (
         <Header
-            badge="#1 Australian Website Designers For Tradies"
+            badge="#1 Australian Website Designers For Professionals"
             title={
                 <>
-                    Tradies with modern websites get{" "}
+                    Businesses with modern websites get{" "}
                     <span className="text-primary inline leading-none">30% more customers</span>
                 </>
             }
@@ -28,37 +28,23 @@ export default function HomeHeader() {
             rightContent={
                 <div className="w-full h-full flex-col md:flex-row flex justify-center md:justify-end items-center md:items-end relative">
                     {/* Desktop Arrow */}
-                    <Arrow className="absolute -left-14 top-0 hidden md:block" delay={1.2} rotation={110} />
-
-                    {/* Mobile Arrow */}
-                    {/* <Arrow className="block md:hidden" flip={true} rotation={180} /> */}
+                    <Arrow className="absolute -left-20 bottom-10 hidden md:block" delay={0.4} rotation={60} />
 
                     {/* Image Shuffle */}
-                    <ImageShuffle />
+                    <div className="relative hidden md:block">
+                        <Image src="/images/home-hero.png" alt="Hero Image" width={650} height={650} className={`-mt-8`} />
+                    </div>
 
-                    {/* USP Card */}
-                    <USPCard className="hidden md:flex flex-row gap-3 justify-center mb-8 md:mb-0 items-center md:absolute right-16 top-14 z-10">
-                        <div className="flex justify-center items-center bg-gray-100 rounded-full p-2 w-10 h-10">
-                            <FaRegThumbsUp className="text-xl " />
-                        </div>
-                        <div className="leading-none whitespace-nowrap">
-                            <div className="leading-none font-bold">15+ Years</div>
-                            <div className="leading-none text-xs text-gray-500">of experience</div>
-                        </div>
-                    </USPCard>
-
-                    {/* USP Card */}
-                    <USPCard className="hidden md:flex flex-row gap-3 justify-center items-center mt-0 md:mt-0 md:absolute left-6 top-48 z-10">
-                        <div className="leading-none whitespace-nowrap">
-                            <div className="leading-none font-bold">15+ Years</div>
-                            <div className="leading-none text-xs text-gray-500">of experience</div>
-                        </div>
-                        <div className="flex justify-center items-center bg-gray-100 rounded-full p-2 w-10 h-10">
-                            <FaRegThumbsUp className="text-xl " />
-                        </div>
-                    </USPCard>
+                    {/* Mobile Image */}
+                    <div className="flex flex-col md:hidden gap-4">
+                        {/* <Image src="/images/hero-man.png" alt="Hero Image" width={650} height={650} className="" /> */}
+                        <Image src="/images/hero-woman.png" alt="Hero Image" width={650} height={650} className="" />
+                    </div>
                 </div>
             }
+            leftClassName="md:-mt-10"
+            className="md:py-0"
+
         />
     );
 }
