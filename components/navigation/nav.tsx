@@ -38,7 +38,7 @@ export default function Nav() {
 
     return (
         <nav className="flex justify-between items-center max-w-7xl w-full py-10 px-4 md:px-0">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 md:gap-12">
                 <button
                     className="lg:hidden"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -64,16 +64,22 @@ export default function Nav() {
                 <Link href="/">
                     <Logo />
                 </Link>
+                <div className="hidden lg:block">
+                    <ul className="flex gap-8 items-center w-full text-sm">
+                        {navigationLinks.map((link) => (
+                            <li key={link.href}>
+                                <a 
+                                    href={link.href} 
+                                    className="relative after:absolute after:-bottom-2 after:left-0 after:h-[1px] after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300 hover:text-primary transition-all duration-100"
+                                >
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-            <div className="hidden lg:block">
-                <ul className="flex gap-10 items-center w-full">
-                    {navigationLinks.map((link) => (
-                        <li key={link.href}>
-                            <a href={link.href}>{link.label}</a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+
             <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
                 <div className="flex items-center gap-2">
                     <FaPhoneAlt className="text-sm" />

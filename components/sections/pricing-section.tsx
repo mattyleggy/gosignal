@@ -12,33 +12,34 @@ export function PricingSection() {
     const usps = [
         {
             icon: <FaRegStar className="w-5 h-5" />,
-            title: "Expert Engineers",
-            description: "Our Experienced Team Is Here To Guide You Through.",
+            title: "We're Aussie Based",
+            description:
+                "Australian-based team that understands local market needs and businesses.",
         },
         {
             icon: <HiOutlineCurrencyDollar className="w-5 h-5" />,
-            title: "Flexible Pricing",
-            description: "Affordable Monthly Plans That Fit Your Budget.",
+            title: "Simple Monthly Plans",
+            description: "Clear, all-inclusive pricing with no surprise costs.",
         },
         {
             icon: <FaRegHandshake className="w-5 h-5" />,
-            title: "Custom Solutions",
-            description: "Tailored Approaches For Your Specific Needs.",
+            title: "Direct Communication",
+            description: "No middlemen - work directly with your development team.",
         },
         {
             icon: <RiCustomerService2Line className="w-5 h-5" />,
-            title: "Quality Guarantee",
-            description: "We Stand Behind Our Work With Full Confidence.",
+            title: "SEO Optimised",
+            description: "Transparent SEO strategies with clear explanations and realistic results.",
         },
         {
             icon: <FaRegClock className="w-5 h-5" />,
-            title: "24/7 Support",
-            description: "Round-The-Clock Assistance When You Need It.",
+            title: "Ongoing Support",
+            description: "Regular updates, backups, and maintenance included.",
         },
         {
             icon: <RiTeamLine className="w-5 h-5" />,
-            title: "Dedicated Team",
-            description: "Personal Account Manager For Every Client.",
+            title: "Expert Team",
+            description: "Senior developers with 15+ years industry experience.",
         },
     ];
 
@@ -47,14 +48,15 @@ export function PricingSection() {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
                 <div className="w-full lg:w-3/4">
                     <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
-                        <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
+                        <Badge variant="secondary">Afforable &amp; Transparent Pricing</Badge>
                         <Typography variant="h2" className="leading-tight">
                             $0 Down, $150 Per Month. 12 Months Minimum
                         </Typography>
                         <p className="text-muted-foreground text-lg">
-                            Our company provides all types of roof repairs, both residential and
-                            commercial, regardless of the damage level. We also offer partial tile
-                            replacement.
+                            Start with our standard 5-page business website package with no upfront
+                            costs. If you need more pages, we can customise a solution for your
+                            needs. Every website includes professional design, reliable hosting,
+                            included revisions, and ongoing support.
                         </p>
                         <Button
                             variant={"dropShadow"}

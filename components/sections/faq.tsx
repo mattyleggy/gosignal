@@ -41,7 +41,7 @@ const faqs = [
     },
     {
         question: "How Many Changes Can I Make To My Website?",
-        answer: "Our plans include unlimited changes and updates to keep your website current and effective.",
+        answer: "Our plans include changes and updates to keep your website current and effective.",
     },
     {
         question: "Is There Anything Else I Need To Do To Get An Online Footprint?",

@@ -70,7 +70,7 @@ export default function WhoAreWe() {
                         </p>
 
                         <p>
-                            Just as you&apos;re trusted in your trade, you can trust me to provide the
+                            Just as you&apos;re trusted in your business, you can trust me to provide the
                             exact result you need. I&apos;m here to listen to how you want to portray
                             your business and here to help whenever you need it.
                         </p>

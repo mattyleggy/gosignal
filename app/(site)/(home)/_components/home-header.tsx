@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HomeHeader() {
     return (
         <Header
-            badge="#1 Australian Website Designers For Professionals"
+            badge="Custom Websites For Aussie Businesses"
             title={
                 <>
                     Businesses with modern websites get{" "}
@@ -30,7 +30,7 @@ export default function HomeHeader() {
 
                     {/* Image Shuffle */}
                     <div className="relative hidden md:block">
-                        <Image src="/images/home-hero.png" alt="Hero Image" width={650} height={650} className={`-mt-8`} />
+                        <Image src="/images/home-hero.png" alt="Hero Image" width={650} height={650} className={`-mt-16`} />
                     </div>
 
                     {/* Mobile Image */}
@@ -40,7 +40,7 @@ export default function HomeHeader() {
                     </div>
                 </div>
             }
-            leftClassName="md:-mt-10"
+            leftClassName="md:-mt-20"
             className="md:py-0"
 
         />

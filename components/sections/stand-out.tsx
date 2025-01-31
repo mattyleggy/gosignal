@@ -83,25 +83,18 @@ export default function StandOut() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row gap-6">
-                        {/* Feature 3 */}
-                        <div className={cn(topRightClasses, "bg-primary/10 text-black/90 w-full lg:w-1/2")}>
-                            We setup your Facebook & Instagram socials and help grow your audience
-                            with regular content to keep your customers engaged.
-                        </div>
-
+                    <div className="flex flex-col lg:flex-row gap-6">                        
                         {/* Feature 4 */}
-                        <div className={cn(topLeftClasses, "bg-primary text-primary-foreground/90 w-full lg:w-1/2")}>
+                        <div className={cn(topLeftClasses, "bg-primary text-primary-foreground/90 w-full lg:w-full text-lg")}>
                             <div className="flex items-center gap-4">
                                 <Image
                                     src="/images/australia-flag.png"
                                     alt="Australian Flag"
-                                    width={130}
+                                    width={100}
                                     height={30}
                                 />
                                 <div>
-                                    We create and host all of our websites in Australia and
-                                    architecture them to load fast and efficiently.
+                                    We create and host all of our websites in Australia and design them to load fast and efficiently.
                                 </div>
                             </div>
                         </div>

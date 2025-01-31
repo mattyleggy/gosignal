@@ -11,7 +11,7 @@ export default function KeyFeatures() {
 
     const usps = [
         {
-            title: "Unlimited Edits",
+            title: "Included Edits",
             icon: FaStarIcon,
         },
         {

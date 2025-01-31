@@ -10,21 +10,21 @@ import ImageShadow from "@/components/common/image-shadow";
 const reasons = [
     {
         icon: <FaRegThumbsUp className="text-xl" />,
-        title: "Affordable Prices",
+        title: "Lifetime Support & Updates",
         description:
-            "From Free Inspections, Claim Assistance, Roof Replacements And Home Upgrades.",
+            "Never worry about maintenance again. We handle all updates, security, and changes to keep your site running perfectly.",
     },
     {
         icon: <FaRegThumbsUp className="text-xl" />,
-        title: "Expert Engineers",
+        title: "Custom-Built Solutions",
         description:
-            "Our Experienced, Knowledgeable Team Is Here To Guide You Through Every Step Of The Process.",
+            "Tailored websites built specifically for your business needs, not generic templates that limit your growth.",
     },
     {
         icon: <FaRegThumbsUp className="text-xl" />,
-        title: "Quality Materials",
+        title: "We get you more customers",
         description:
-            "We Understand The Importance Of Protecting Your Family And Investment, And We Treat With Care.",
+            "We build websites that actually work - bringing you real customers, not just pretty designs.",
     },
 ];
 
@@ -62,9 +62,10 @@ export function ReasonsToChooseUs() {
                             Reasons To Choose Us For Your Website
                         </Typography>
                         <p className="text-muted-foreground">
-                            We have been installing boilers and heating systems for over 10 years
-                            and we are proud to say we are experts in this field. We have a team of
-                            skilled & qualified members.
+                            With over 15+ years of experience in web development and digital marketing, 
+                            we specialise in creating websites that drive real business growth. Our team 
+                            of developers and designers are committed to delivering solutions 
+                            that exceed expectations.
                         </p>
                     </div>
 

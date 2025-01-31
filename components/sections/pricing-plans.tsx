@@ -3,7 +3,7 @@ import Section from "@/components/common/section";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GlowCircle } from "@/components/ui/glow-circle";
 import { plans } from "@/lib/plans";
@@ -77,7 +77,7 @@ export function PricingPlans() {
                                             key={feature.text}
                                             className="flex gap-3 items-start opacity-60"
                                         >
-                                            <X className="w-5 h-5 shrink-0 mt-0.5" />
+                                            <Plus className="w-5 h-5 shrink-0 mt-0.5" />
                                             <span className="text-sm">{feature.text}</span>
                                         </li>
                                     ))}
