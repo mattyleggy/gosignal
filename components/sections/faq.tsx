@@ -29,10 +29,10 @@ const faqs = [
     },
     {
         question: "Can I Talk To Someone In Australia?",
-        answer: "Yes! We're 100% Australian owned and operated. You'll always speak with someone local who understands your needs.",
+        answer: "Yes! We&apos;re 100% Australian owned and operated. You'll always speak with someone local who understands your needs.",
     },
     {
-        question: "I'm Only A Small Business With Limited Cash Flow, Can I Afford A Website?",
+        question: "I&apos;m Only A Small Business With Limited Cash Flow, Can I Afford A Website?",
         answer: "We offer flexible payment plans starting at $150/month with $0 down to make professional websites accessible for small businesses.",
     },
     {
