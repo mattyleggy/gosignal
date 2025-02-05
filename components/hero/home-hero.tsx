@@ -1,10 +1,15 @@
+"use client";
 import Header from "@/components/header/header";
 import { Arrow } from "@/components/common/arrow";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
+import { ScrollButton } from "@/components/common/scroll-button";
+import { useModalStore } from "@/stores/use-modal-store";
 
 export default function HomeHeader() {
+    const onOpen = useModalStore((state) => state.onOpen);
+
     return (
         <Header
             badge="Custom Websites For Aussie Businesses"
@@ -17,16 +22,18 @@ export default function HomeHeader() {
             subTitle="With over 15 years of experience, we deliver affordable and high quality websites to help you get more customers."
             buttons={
                 <>
-                    <Button variant="dropShadow">Get Started</Button>
-                    <Button variant="outline">
-                        Contact Us <ArrowRightIcon className="w-4 h-4" />
+                    <Button variant="dropShadow" onClick={() => onOpen()}>
+                        Get Started
                     </Button>
+                    <ScrollButton targetId="contact" variant="outline">
+                        Contact Us <ArrowRightIcon className="w-4 h-4" />
+                    </ScrollButton>
                 </>
             }
             rightContent={
                 <div className="w-full h-full flex-col md:flex-row flex justify-center md:justify-end items-center md:items-end relative">
                     {/* Desktop Arrow */}
-                    <Arrow className="absolute -left-20 bottom-10 hidden md:block" delay={0.4} rotation={60} />
+                    <Arrow className="absolute -left-20 bottom-10 hidden md:block" delay={0} rotation={60} />
 
                     {/* Image Shuffle */}
                     <div className="relative hidden md:block">

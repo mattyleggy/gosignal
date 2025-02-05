@@ -32,7 +32,7 @@ export function Arrow({ className, rotation = 0, flip = false, size = 100, delay
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.7 + delay }}
+                    transition={{ delay: 0.5 + delay }}
                 />
             </g>
             <motion.path
@@ -44,7 +44,7 @@ export function Arrow({ className, rotation = 0, flip = false, size = 100, delay
                 initial={{ pathLength: 0, opacity: 0 }}
                 whileInView={{ pathLength: 1, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2 + delay, duration: 0.5, ease: "easeInOut" }}
+                transition={{ delay: 0 + delay, duration: 0.5, ease: "easeInOut" }}
             />
             <defs>
                 <clipPath id="clip0_1_1921">

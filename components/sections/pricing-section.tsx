@@ -7,6 +7,8 @@ import { FaRegClock, FaRegHandshake, FaRegStar } from "react-icons/fa6";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import { RiCustomerService2Line, RiTeamLine } from "react-icons/ri";
 import { cn } from "@/lib/utils";
+import { ScrollButton } from "../common/scroll-button";
+import { ArrowDown } from "lucide-react";
 
 export function PricingSection() {
     const usps = [
@@ -29,7 +31,8 @@ export function PricingSection() {
         {
             icon: <RiCustomerService2Line className="w-5 h-5" />,
             title: "SEO Optimised",
-            description: "Transparent SEO strategies with clear explanations and realistic results.",
+            description:
+                "Transparent SEO strategies with clear explanations and realistic results.",
         },
         {
             icon: <FaRegClock className="w-5 h-5" />,
@@ -58,12 +61,13 @@ export function PricingSection() {
                             needs. Every website includes professional design, reliable hosting,
                             included revisions, and ongoing support.
                         </p>
-                        <Button
+                        <ScrollButton
+                            targetId="pricing"
                             variant={"dropShadow"}
                             className="bg-primary text-white hover:bg-primary/90 mt-4"
                         >
-                            See Available Plans
-                        </Button>
+                            See Available Plans <ArrowDown className="w-4 h-4" />
+                        </ScrollButton>
                     </div>
                 </div>
 

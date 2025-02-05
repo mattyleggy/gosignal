@@ -50,7 +50,7 @@ function TeamMember({ image, name, role, location }: TeamMemberProps) {
 export default function WhoAreWe() {
     return (
         <Section backgroundPosition="right" className="space-y-6">
-            <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
+            <Badge variant="secondary">About Us</Badge>
             <Typography variant="h2">Who Are We?</Typography>
 
             <div className="flex flex-col-reverse md:flex-row justify-center items-center md:space-x-10 space-y-reverse space-y-10 md:space-y-0 w-full">
@@ -58,7 +58,7 @@ export default function WhoAreWe() {
                 <div className="space-y-6 w-full md:w-1/2">
                     <div className="space-y-6 text-lg text-muted-foreground">
                         <p>
-                            I&apos;m Matthew, a Brissie local. I started OpenLid Websites with a goal to
+                            I&apos;m Matthew, a Brissie local. I started Go Signal Websites with a goal to
                             make websites affordable and help businesses & contractors grow their
                             business and gain leads.
                         </p>

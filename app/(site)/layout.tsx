@@ -1,4 +1,3 @@
-
 import Nav from "@/components/navigation/nav";
 import { Toaster } from "@/components/ui/toaster";
 import { CallToAction } from "@/components/forms/call-to-action";
@@ -19,7 +18,10 @@ export default function Layout({
                     <Nav />
                     {children}
 
-                    <ContactForm />
+                    <section id="contact" className="w-full">
+                        <ContactForm />
+                    </section>
+
                     <CallToAction overlapsFooter={true} />
                     <Footer hasCta={true} />
                 </main>

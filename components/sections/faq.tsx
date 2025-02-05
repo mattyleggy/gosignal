@@ -17,15 +17,15 @@ import { QuestionCloud } from "@/components/common/question-cloud";
 const faqs = [
     {
         question: "How Is Open Lid Different?",
-        answer: "We focus exclusively on helping tradies and small businesses succeed online with affordable, high-quality websites.",
+        answer: "We focus exclusively on helping businesses (e.g. tradies, doctors, small businesses, etc.) to succeed online with affordable, high-quality websites.",
     },
     {
         question: "Does My Business Need A Website?",
-        answer: "Businesses With Business Quality Websites On Average See An Increase In Sales Of 30%",
+        answer: "Businesses With Business Quality Websites On Average See An Increase In Sales Of 30%. It helps you get more customers and grow your business.",
     },
     {
         question: "How Long Does It Take For Me To Get A Website Up And Running?",
-        answer: "We typically complete websites within 14 days of receiving your content and requirements.",
+        answer: "We typically complete websites within 2-4 weeks from receiving your content and requirements.",
     },
     {
         question: "Can I Talk To Someone In Australia?",
@@ -34,10 +34,6 @@ const faqs = [
     {
         question: "I'm Only A Small Business With Limited Cash Flow, Can I Afford A Website?",
         answer: "We offer flexible payment plans starting at $150/month with $0 down to make professional websites accessible for small businesses.",
-    },
-    {
-        question: "Does My Business Need Social Media?",
-        answer: "Social media presence helps build trust and engage with customers. We can help set up and manage your social media accounts.",
     },
     {
         question: "How Many Changes Can I Make To My Website?",
@@ -57,7 +53,7 @@ export default function FAQ() {
                 <div className="flex flex-col md:flex-row gap-16">
                     {/* Left side - Title */}
                     <div className="md:w-1/3 space-y-4">
-                        <Badge variant="secondary">Lorem Ipsum Dummy</Badge>
+                        <Badge variant="secondary">You've got questions, we've got answers!</Badge>
                         <Typography variant="h2">Frequently Asked Questions (FAQ)</Typography>
 
                         <div className="relative inline-block">

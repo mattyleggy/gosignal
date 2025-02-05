@@ -12,6 +12,7 @@ export default function Header({
     rightContent,
     leftClassName,
     className,
+    stats
 }: {
     badge?: React.ReactNode;
     title: React.ReactNode;
@@ -20,6 +21,7 @@ export default function Header({
     rightContent: React.ReactNode;
     leftClassName?: string;
     className?: string;
+    stats?: React.ReactNode;
 }) {
     return (
         <header
@@ -28,8 +30,8 @@ export default function Header({
             }`}
         >
             <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                // initial={{ opacity: 0, x: -50 }}
+                // whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 // transition={{ duration: 0.4 }}
                 className={`w-full md:w-1/2 flex flex-col gap-4 md:gap-8 items-center md:items-start justify-center text-center md:text-left ${leftClassName || ""}`}
@@ -42,10 +44,11 @@ export default function Header({
                 <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 items-center md:items-start">
                     {buttons}
                 </div>
+                {stats && <div className="w-full flex flex-col sm:flex-row gap-4 items-center md:items-start">{stats}</div>}
             </motion.div>
             <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                // initial={{ opacity: 0, x: 50 }}
+                // whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 // transition={{ duration: 0.8, delay: 0.8 }}
                 className="w-full md:w-1/2 flex justify-center"

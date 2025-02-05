@@ -6,21 +6,18 @@ import Section from "../common/section";
 
 const socialLinks = [
     { icon: <FaFacebook className="w-5 h-5" />, href: "#" },
-    { icon: <FaTwitter className="w-5 h-5" />, href: "#" },
     { icon: <FaInstagram className="w-5 h-5" />, href: "#" },
-    { icon: <FaPinterest className="w-5 h-5" />, href: "#" },
 ];
 
 const footerLinks = {
     links1: [
-        { label: "Our Work", href: "#" },
-        { label: "Industries", href: "#" },
-        { label: "Contact Us", href: "#" },
+        { label: "About Us", href: "/about" },
+        { label: "Our Work", href: "/work" },
+        { label: "Contact Us", href: "/contact" },
     ],
     links2: [
-        { label: "Why us?", href: "#" },
-        { label: "Plans & Pricing", href: "#" },
-        { label: "Services", href: "#" },
+        { label: "Services", href: "/services" },
+        { label: "Pricing", href: "/pricing" },
     ],
     contact: [
         { label: "hello@gosignal.com.au", icon: "📧" },
@@ -59,16 +56,16 @@ export function Footer({ hasCta = false }: FooterProps) {
 
                     {/* Links Column 1 */}
                     <div className="space-y-4">
-                        <Typography variant="h4">Links</Typography>
+                        <Typography variant="h4">Who Are We?</Typography>
                         <ul className="space-y-2">
                             {footerLinks.links1.map((link, index) => (
                                 <li key={index}>
-                                    <Link
+                                    <a
                                         href={link.href}
                                         className="text-muted-foreground hover:text-primary"
                                     >
                                         {link.label}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -76,16 +73,16 @@ export function Footer({ hasCta = false }: FooterProps) {
 
                     {/* Links Column 2 */}
                     <div className="space-y-4">
-                        <Typography variant="h4">Links</Typography>
+                        <Typography variant="h4">What do we offer?</Typography>
                         <ul className="space-y-2">
                             {footerLinks.links2.map((link, index) => (
                                 <li key={index}>
-                                    <Link
+                                    <a
                                         href={link.href}
                                         className="text-muted-foreground hover:text-primary"
                                     >
                                         {link.label}
-                                    </Link>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -110,7 +107,7 @@ export function Footer({ hasCta = false }: FooterProps) {
 
                 {/* Copyright */}
                 <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground w-full">
-                    <p>© {new Date().getFullYear()} OpenLid</p>
+                    <p>© {new Date().getFullYear()} Go Signal</p>
                     <div className="flex gap-4">
                         <Link href="/privacy" className="hover:text-primary">
                             Privacy
