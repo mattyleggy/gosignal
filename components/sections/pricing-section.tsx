@@ -1,7 +1,6 @@
 import Section from "@/components/common/section";
 import { Typography } from "@/components/common/typography";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { GlowCircle } from "@/components/ui/glow-circle";
 import { FaRegClock, FaRegHandshake, FaRegStar } from "react-icons/fa6";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";

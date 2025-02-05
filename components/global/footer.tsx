@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa6";
+// import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { Typography } from "@/components/common/typography";
 import { Logo } from "../common/logo";
 import Section from "../common/section";
 
-const socialLinks = [
-    { icon: <FaFacebook className="w-5 h-5" />, href: "#" },
-    { icon: <FaInstagram className="w-5 h-5" />, href: "#" },
-];
+// const socialLinks = [
+//     { icon: <FaFacebook className="w-5 h-5" />, href: "#" },
+//     { icon: <FaInstagram className="w-5 h-5" />, href: "#" },
+// ];
 
 const footerLinks = {
     links1: [
@@ -42,7 +42,7 @@ export function Footer({ hasCta = false }: FooterProps) {
                         We give your business the <span className="font-bold">go signal</span> to get online and start bringing in customers.
                         </p>
                         <div className="flex gap-4">
-                            {socialLinks.map((social, index) => (
+                            {/* {socialLinks.map((social, index) => (
                                 <Link
                                     key={index}
                                     href={social.href}
@@ -50,7 +50,7 @@ export function Footer({ hasCta = false }: FooterProps) {
                                 >
                                     {social.icon}
                                 </Link>
-                            ))}
+                            ))} */}
                         </div>
                     </div>
 
