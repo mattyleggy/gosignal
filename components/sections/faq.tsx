@@ -29,10 +29,10 @@ const faqs = [
     },
     {
         question: "Can I Talk To Someone In Australia?",
-        answer: "Yes! We&apos;re 100% Australian owned and operated. You'll always speak with someone local who understands your needs.",
+        answer: "Yes! We're 100% Australian owned and operated. You'll always speak with someone local who understands your needs.",
     },
     {
-        question: "I&apos;m Only A Small Business With Limited Cash Flow, Can I Afford A Website?",
+        question: "I'm Only A Small Business With Limited Cash Flow, Can I Afford A Website?",
         answer: "We offer flexible payment plans starting at $150/month with $0 down to make professional websites accessible for small businesses.",
     },
     {
@@ -53,7 +53,7 @@ export default function FAQ() {
                 <div className="flex flex-col md:flex-row gap-16">
                     {/* Left side - Title */}
                     <div className="md:w-1/3 space-y-4">
-                        <Badge variant="secondary">You've got questions, we've got answers!</Badge>
+                        <Badge variant="secondary">You&apos;ve got questions, we&apos;ve got answers!</Badge>
                         <Typography variant="h2">Frequently Asked Questions (FAQ)</Typography>
 
                         <div className="relative inline-block">
