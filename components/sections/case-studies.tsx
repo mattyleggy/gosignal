@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-
+import Link from "next/link";
 export function CaseStudies() {
     return (
         <Section className="relative">
@@ -22,13 +22,13 @@ export function CaseStudies() {
             </div>
 
             <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-8 justify-center items-center">
-                <div className="w-full lg:w-[600px]">
-                    <BrowserMockup url="https://www.brissieroofing.com.au/">
+                <div className="w-full lg:w-[1200px]">
+                    <BrowserMockup url="https://www.peachchess.com.au/">
                         <Image
-                            src="/images/website-02.png"
+                            src="/images/portfolio/peach-chess.png"
                             alt="Brissie Roofing Website"
-                            height={600}
-                            width={600}
+                            height={1200}
+                            width={1200}
                             className="rounded-xl shadow-md bg-contain w-full"
                         />
                     </BrowserMockup>
@@ -36,12 +36,12 @@ export function CaseStudies() {
 
                 <div className="space-y-6 text-center lg:text-left">
                     <div className="space-y-2">
-                        <Badge className="font-normal">November 2024</Badge>
-                        <Typography variant="h3">Brissie Roofing</Typography>
+                        <Badge className="font-normal">May 2025</Badge>
+                        <Typography variant="h3">Peach Chess</Typography>
                     </div>
 
                     <p className="text-muted-foreground">
-                        We built a clean, user-friendly website for Brisbane&apos;s top roofing company,
+                        We built a clean, user-friendly website for a Toowoomba based chess coach,
                         designed to showcase their services, attract more leads, and make it easy
                         for customers to get in touch.
                     </p>
@@ -51,9 +51,11 @@ export function CaseStudies() {
                         that feels professional and approachable.
                     </p>
 
-                    <Button variant="dropShadow" className="gap-2">
-                        Visit Website
-                        <ArrowUpRight className="w-4 h-4" />
+                    <Button variant="dropShadow" className="gap-2" asChild>
+                        <Link href="https://peachchess.gosignal.com.au/" target="_blank">
+                            Visit Website
+                            <ArrowUpRight className="w-4 h-4" />
+                        </Link>
                     </Button>
                 </div>
             </div>
