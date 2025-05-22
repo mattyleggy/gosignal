@@ -52,7 +52,7 @@ export function CaseStudies() {
                     </p>
 
                     <Button variant="dropShadow" className="gap-2" asChild>
-                        <Link href="https://peachchess.gosignal.com.au/" target="_blank">
+                        <Link href="https://www.peachchess.com.au/" target="_blank">
                             Visit Website
                             <ArrowUpRight className="w-4 h-4" />
                         </Link>
