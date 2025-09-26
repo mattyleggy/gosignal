@@ -21,7 +21,6 @@ import { FaPaperPlane } from "react-icons/fa6";
 import { submitContactForm } from "@/actions/contact";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect, useRef } from "react";
-import ImageShadow from "../common/image-shadow";
 
 interface ContactFormProps {
     variant?: "default" | "light";

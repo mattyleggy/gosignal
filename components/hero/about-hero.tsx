@@ -1,7 +1,6 @@
 "use client";
 import Header from "@/components/header/header";
 import { WaveBackground } from "../common/wave-background";
-import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import { GiAustralia } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa";
