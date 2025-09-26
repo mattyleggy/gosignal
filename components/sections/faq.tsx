@@ -16,7 +16,7 @@ import { QuestionCloud } from "@/components/common/question-cloud";
 
 const faqs = [
     {
-        question: "How Is Open Lid Different?",
+        question: "How Is Go Signal Different?",
         answer: "We focus exclusively on helping businesses (e.g. tradies, doctors, small businesses, etc.) to succeed online with affordable, high-quality websites.",
     },
     {
