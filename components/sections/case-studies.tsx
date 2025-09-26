@@ -35,11 +35,6 @@ export function CaseStudies() {
                 </div>
 
                 <div className="space-y-6 text-center lg:text-left">
-                    <div className="space-y-2">
-                        <Badge className="font-normal">May 2025</Badge>
-                        <Typography variant="h3">Peach Chess</Typography>
-                    </div>
-
                     <p className="text-muted-foreground">
                         We built a clean, user-friendly website for a Toowoomba based chess coach,
                         designed to showcase their services, attract more leads, and make it easy

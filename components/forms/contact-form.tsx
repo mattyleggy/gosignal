@@ -240,15 +240,7 @@ export const ContactForm = ({ variant = "default" }: ContactFormProps) => {
                                 </div>
                             </form>
                         </Form>
-                    </div>
-
-                    {/* Right Panel - Image */}
-                    <div className="relative h-[400px] lg:h-full w-full lg:w-auto lg:pr-4">
-                        <ImageShadow 
-                            src="/images/matty-portrait.jpg" 
-                            alt="Contact Us"
-                        />
-                    </div>
+                    </div>                   
                 </div>
             </div>
         </Section>

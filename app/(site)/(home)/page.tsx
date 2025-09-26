@@ -5,7 +5,6 @@ import { ReasonsToChooseUs } from "../../../components/sections/reasons-to-choos
 import { PricingSection } from "../../../components/sections/pricing-section";
 import { PricingPlans } from "../../../components/sections/pricing-plans";
 import StandOut from "../../../components/sections/stand-out";
-import WhoAreWe from "../../../components/sections/who-are-we";
 import FAQ from "../../../components/sections/faq";
 import { CaseStudies } from "@/components/sections/case-studies";
 import type { Metadata } from "next";
@@ -38,7 +37,6 @@ export default function Home() {
             <CaseStudies />
             <PricingPlans />
             <StandOut />
-            <WhoAreWe />
             <FAQ />
         </>
     );

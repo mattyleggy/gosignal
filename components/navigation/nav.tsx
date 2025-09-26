@@ -25,11 +25,6 @@ export default function Nav() {
             sectionId: "pricing",
         },
         {
-            label: "About Us",
-            href: "/about",
-            sectionId: "about",
-        },
-        {
             label: "Contact",
             href: "/contact",
             sectionId: "contact",

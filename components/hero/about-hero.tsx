@@ -23,13 +23,6 @@ export default function AboutHero() {
                             delay={0}
                             rotation={120}
                         />
-                        <Image
-                            src="/images/hero/me-about-hero.png"
-                            alt="Go Signal Team"
-                            width={500}
-                            height={500}
-                            className="object-contain"
-                        />
                     </div>
                 }
                 buttons={

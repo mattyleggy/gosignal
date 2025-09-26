@@ -11,7 +11,6 @@ import Section from "../common/section";
 
 const footerLinks = {
     links1: [
-        { label: "About Us", href: "/about" },
         { label: "Our Work", href: "/work" },
         { label: "Contact Us", href: "/contact" },
     ],

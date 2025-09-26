@@ -1,4 +1,3 @@
-import WhoAreWe from "@/components/sections/who-are-we";
 import OurProcess from "@/components/sections/our-process";
 import OurValues from "@/components/sections/our-values";
 import AboutHero from "@/components/hero/about-hero";
@@ -28,7 +27,6 @@ export default function AboutPage() {
             <BackgroundGradient />
             <AboutHero />
             <OurValues />            
-            <WhoAreWe />            
             <OurProcess />
         </>
     );
