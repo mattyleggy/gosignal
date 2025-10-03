@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = localFont({
@@ -72,6 +73,25 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                {/* OpenLid Flicker-Free Mode */}
+                <Script
+                    id="openlid-flicker-free"
+                    strategy="beforeInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            var openLidTimeout=500;!function(e,i,o,t){var n=e.createElement("style");n.id=t,n.innerHTML="body { opacity: 0; }",e.head.appendChild(n),i.restoreBodyVisibility=function(){var i=e.getElementById(t);i&&i.parentNode&&i.parentNode.removeChild(i)},setTimeout(i.restoreBodyVisibility,o)}(document,window,openLidTimeout,"openlid-noflicker-style");
+                        `,
+                    }}
+                />
+                {/* OpenLid Tracking Code */}
+                <Script
+                    id="openlid-tracking"
+                    src="https://ab.openlid.io/experiments.js?id=tYRqKJpPKXyFc53gF0uBkiDYoiM5DnXD"
+                    strategy="afterInteractive"
+                    async
+                />
+            </head>
             <body className={`${poppins.variable} antialiased`}>
                 {children}
             </body>
